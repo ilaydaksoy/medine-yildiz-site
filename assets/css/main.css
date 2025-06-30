@@ -329,10 +329,22 @@ h6 {
   padding: 10px 0;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
+  justify-content: flex-start !important;
+}
+
+.header .branding, .header .branding .container, .logo, .logo img {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.header .branding .container {
+  max-width: 100% !important;
 }
 
 .header .logo {
   line-height: 1;
+  margin-right: 32px !important;
 }
 
 .header .logo img {
@@ -379,6 +391,23 @@ h6 {
   .header .navmenu {
     order: 3;
   }
+
+  .header .branding .container {
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .mobile-nav-toggle {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    right: 0 !important;
+    left: auto !important;
+    position: relative !important;
+    float: right !important;
+    display: flex !important;
+    align-items: center !important;
+  }
 }
 
 .scrolled .header {
@@ -400,6 +429,7 @@ h6 {
     padding: 0;
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
+    margin-left: 40px !important;
   }
 
   .navmenu ul {
@@ -428,7 +458,7 @@ h6 {
   .navmenu > ul > li > a,
   .navmenu > ul > li > a:focus {
     background: none !important;
-    color: var(--accent-color) !important;
+    color: #198754 !important;
     border-radius: 32px !important;
     transition: background 0.25s, color 0.25s;
     box-shadow: none !important;
@@ -1105,7 +1135,7 @@ section,
 .hero {
   width: 100%;
   min-height: calc(50vh - 56px);
-  padding: 40px 0;
+  padding: 12px 0 !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3700,8 +3730,9 @@ body::before, body::after, html::before, html::after {
 }
 
 .navmenu .dropdown ul li a:hover {
-  background: #e8f5e8 !important;
-  color: #4CAF50 !important;
+  background: #e6f4ea !important;
+  color: #16bb07 !important;
+  box-shadow: 0 2px 12px #01f94840 !important;
 }
 
 /* Testimonials Navigation Buttons */
@@ -3912,3 +3943,128 @@ body::before, body::after, html::before, html::after {
     padding: 12px !important;
   }
 }
+
+@media (min-width: 1200px) {
+  .navmenu ul {
+    gap: 0px !important;
+  }
+  .navmenu > ul > li > a,
+  .navmenu > ul > li > a:focus {
+    min-width: 80px !important;
+    font-size: 15px !important;
+    padding: 8px 10px !important;
+    margin: 0 !important;
+  }
+}
+
+/* Seçili menü butonu kalıcı yeşil arka plan ve beyaz yazı */
+.navmenu > ul > li > a.active,
+.navmenu > ul > li.active > a,
+.navmenu > ul > li > a.active:hover,
+.navmenu > ul > li.active > a:hover {
+  background: #198754 !important;
+  color: #fff !important;
+}
+
+/* Hover durumunda sadece .active yoksa arka plan değişsin */
+.navmenu > ul > li > a:hover:not(.active) {
+  background: #e6f4ea !important;
+  color: #198754 !important;
+}
+
+.navmenu > ul > li > a.active:hover {
+  background: #198754 !important;
+  color: #fff !important;
+}
+
+.navmenu ul {
+  margin-left: 32px !important;
+}
+
+.header .branding .container {
+  justify-content: center !important;
+  padding-left: 0 !important;
+}
+.navmenu {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+@media (max-width: 1200px) {
+  .header .branding .container {
+    position: relative !important;
+  }
+  .mobile-nav-toggle {
+    position: absolute !important;
+    right: 16px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin: 0 !important;
+    z-index: 9999 !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .logo {
+    margin-left: 0 !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+  .logo-title-responsive {
+    margin-left: 0 !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+    display: block !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header .branding .container {
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  .logo {
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+.hero,
+#hero {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+
+@media (max-width: 576px) {
+  .macro-item small {
+    font-size: 0.68rem !important;
+    white-space: nowrap !important;
+    word-break: normal !important;
+  }
+  .macro-item span {
+    font-size: 0.95rem !important;
+  }
+  .macro-item {
+    padding: 0.25rem 0.2rem !important;
+    min-width: 70px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    margin-left: 10px !important;
+  }
+  .logo-title-responsive {
+    margin-left: 6px !important;
+  }
+}
+
+/* Menü hover canlı koyu yeşil */
+.navmenu > ul > li > a:hover {
+  background: #e6f4ea !important;
+  color: #198754 !important;
+  box-shadow: 0 2px 12px #b9f6ca40 !important;
+}
+

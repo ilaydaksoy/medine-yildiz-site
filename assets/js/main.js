@@ -622,15 +622,6 @@
     });
   }
 
-  // Menüde tıklanan linke active ekle, diğerlerinden kaldır
-  const navLinks = document.querySelectorAll('.navmenu a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      navLinks.forEach(l => l.classList.remove('active'));
-      this.classList.add('active');
-    });
-  });
-
   // --- Mobilde Programlar Dropdown Açılır Menü (Sadece ok ikonuna tıklanınca) ---
   document.querySelectorAll('.toggle-dropdown').forEach(function(icon) {
     icon.addEventListener('click', function(e) {
@@ -675,6 +666,15 @@
       window.open(wpUrl, '_blank');
     });
   }
+
+  // Menüde tıklanan linke active ekle, diğerlerinden kaldır
+  const navLinks = document.querySelectorAll('.navmenu a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      navLinks.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
 
 })();
 

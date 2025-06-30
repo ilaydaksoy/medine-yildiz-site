@@ -51,7 +51,7 @@
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
           <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@nutrilife.com">info@nutrilife.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+90 555 123 45 67</span></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+90 505 844 60 46</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
           <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
@@ -66,9 +66,10 @@
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.webp" alt=""> -->
-          <h1 class="sitename">NutriLife</h1>
+          <img src="assets/img/gallery/logo.webp" alt="Emine Demir Kaya Logo" style="max-height:80px; width:auto;">
+          <span class="logo-title-responsive" style="font-size:1.3rem; font-weight:700; color:#256029; letter-spacing:1px; font-family:'Poppins',sans-serif; line-height:1.1; display:block; margin-left:4px;">
+            EMİNE<br><span style="white-space:nowrap; color:#256029; font-family:'Poppins',sans-serif;">DEMİR KAYA</span>
+          </span>
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -235,7 +236,7 @@
               </p>
               <div class="text-center mt-4">
                 <!-- <a href="#contact" class="cta-btn pulse-button">Randevu Al</a> -->
-                <a href="https://wa.me/905321234567" class="cta-btn pulse-button ms-3" target="_blank">
+                <a href="https://wa.me/905058446046" class="cta-btn pulse-button ms-3" target="_blank">
                   <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
               </div>
@@ -560,7 +561,7 @@
                 <i class="fas fa-user-md"></i>
               </div>
               <div class="member-info">
-                <h4>Dr. Emin Kılıç</h4>
+                <h4>Uzm. Dyt. Emine Demir KAYA</h4>
                 <span>Baş Diyetisyen - Kilo Kontrolü Uzmanı</span>
                 <p>10 yıllık deneyimi ile kilo kontrolü ve beslenme danışmanlığı konusunda uzmanlaşmıştır. Kişiye özel beslenme programları hazırlar.</p>
                 <div class="social">
@@ -579,7 +580,7 @@
                 <i class="fas fa-user-md"></i>
               </div>
               <div class="member-info">
-                <h4>Uzm.Ayşe Kaya</h4>
+                <h4>Uzm. Dyt. Yana ESEN</h4>
                 <span>Sporcu Beslenmesi Uzmanı</span>
                 <p>Sporcu beslenmesi ve performans artırma konusunda uzmanlaşmıştır. Profesyonel sporcular ile çalışmaktadır.</p>
                 <div class="social">
@@ -626,7 +627,9 @@
                     <label for="bmiHeight">Boyunuz (cm)</label>
                     <input type="number" class="form-control" id="bmiHeight" placeholder="Örn: 170" required>
                   </div>
-                  <button type="submit" class="btn btn-primary pulse-button">Hesapla</button>
+                  <div class="text-end">
+                    <button type="submit" class="btn btn-primary pulse-button">Hesapla</button>
+                  </div>
                 </form>
                 <div id="bmiResult" class="result-box" style="display: none;">
                   <h4>BMI Sonucunuz</h4>
@@ -650,25 +653,37 @@
               </div>
               <div class="calculator-body">
                 <form id="calorieForm">
-                  <div class="form-group">
-                    <label for="calorieAge">Yaşınız</label>
-                    <input type="number" class="form-control" id="calorieAge" placeholder="Örn: 30" required>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="calorieAge">Yaşınız</label>
+                        <input type="number" class="form-control" id="calorieAge" placeholder="Örn: 30" required>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="calorieGender">Cinsiyet</label>
+                        <select class="form-select" id="calorieGender" required>
+                          <option value="">Seçiniz</option>
+                          <option value="male">Erkek</option>
+                          <option value="female">Kadın</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label for="calorieGender">Cinsiyet</label>
-                    <select class="form-select" id="calorieGender" required>
-                      <option value="">Seçiniz</option>
-                      <option value="male">Erkek</option>
-                      <option value="female">Kadın</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="calorieWeight">Kilonuz (kg)</label>
-                    <input type="number" class="form-control" id="calorieWeight" placeholder="Örn: 70" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="calorieHeight">Boyunuz (cm)</label>
-                    <input type="number" class="form-control" id="calorieHeight" placeholder="Örn: 170" required>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="calorieWeight">Kilonuz (kg)</label>
+                        <input type="number" class="form-control" id="calorieWeight" placeholder="Örn: 70" required>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="calorieHeight">Boyunuz (cm)</label>
+                        <input type="number" class="form-control" id="calorieHeight" placeholder="Örn: 170" required>
+                      </div>
+                    </div>
                   </div>
                   <div class="form-group">
                     <label for="calorieActivity">Aktivite Seviyesi</label>
@@ -681,7 +696,9 @@
                       <option value="1.9">Aşırı Aktif (Günde 2 kez egzersiz)</option>
                     </select>
                   </div>
-                  <button type="submit" class="btn btn-primary pulse-button">Hesapla</button>
+                  <div class="text-end">
+                    <button type="submit" class="btn btn-primary pulse-button">Hesapla</button>
+                  </div>
                 </form>
                 <div id="calorieResult" class="result-box" style="display: none;">
                   <h4>Günlük Kalori İhtiyacınız</h4>
@@ -1149,7 +1166,7 @@
                   </div>
                   <div class="contact-info">
                     <h4>Telefon</h4>
-                    <p>+90 532 123 45 67</p>
+                    <p>+90 505 844 60 46</p>
                   </div>
                 </div>
               </div>
@@ -1184,8 +1201,8 @@
           <!-- Contact Form -->
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="contact-form-card text-center d-flex flex-column align-items-center justify-content-center" style="height:100%;">
-              <a href="https://wa.me/905321234567" class="cta-btn pulse-button w-100 mb-2" target="_blank" style="font-size:1.2rem;">
-                <i class="fab fa-whatsapp"></i> WhatsApp ile İletişim<br><span style="font-size:1rem;">+90 532 123 45 67</span>
+              <a href="https://wa.me/905058446046" class="cta-btn pulse-button w-100 mb-2" target="_blank" style="font-size:1.2rem;">
+                <i class="fab fa-whatsapp"></i> WhatsApp ile İletişim<br><span style="font-size:1rem;">+90 505 844 60 46</span>
               </a>
             </div>
           </div>
@@ -1216,7 +1233,7 @@
         <a href="#" class="footer-social-link"><i class="bi bi-facebook"></i></a>
         <a href="#" class="footer-social-link"><i class="bi bi-instagram"></i></a>
         <a href="#" class="footer-social-link"><i class="bi bi-linkedin"></i></a>
-        <a href="https://wa.me/905321234567" class="footer-social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/905058446046" class="footer-social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
       </div>
       <div class="footer-bottom text-center mt-4">
         <p>&copy; 2025 <strong>NutriLife</strong>. Tüm hakları saklıdır.</p>
@@ -1241,6 +1258,14 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <style>
+  @media (max-width: 600px) {
+    .logo-title-responsive {
+      font-size: 1.1rem !important;
+    }
+  }
+  </style>
 
 </body>
 
