@@ -4068,3 +4068,123 @@ body::before, body::after, html::before, html::after {
   box-shadow: 0 2px 12px #b9f6ca40 !important;
 }
 
+/* EN SON VE TEK GEÇERLİ MENÜ HOVER RENGİ - DAHA CANLI YEŞİL */
+.navmenu > ul > li > a:hover, .navmenu > ul > li.active > a:hover {
+  background: #22c55e !important;
+  color: #fff !important;
+  box-shadow: 0 2px 12px #22c55e40 !important;
+}
+
+/* --------------------------------------------------------------
+   NAVBAR'daki "Randevu Al" (header CTA): her zaman sabit yeşil
+   (Dosyanın en sonunda -> diğer hover kurallarını kesin ezer)
+-------------------------------------------------------------- */
+.header .cta-btn.appointment-btn,
+.header .cta-btn.appointment-btn:focus,
+.header .cta-btn.appointment-btn:hover,
+.header .cta-btn.appointment-btn:focus:hover,
+.header .cta-btn.appointment-btn:active {
+  background: #198754 !important;
+  border-color: #198754 !important;
+  color: #fff !important;
+  transform: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+/* Mobilde (xs) header içindeki appointment-btn (btn btn-success) için de sabit kalsın */
+.header .btn.appointment-btn,
+.header .btn.appointment-btn:hover,
+.header .btn.appointment-btn:focus,
+.header .btn.appointment-btn:active {
+  background: #198754 !important;
+  border-color: #198754 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* --------------------------------------------------------------
+   Mobil header düzeni: Logo solda, sağda (Randevu Al + hamburger)
+-------------------------------------------------------------- */
+@media (max-width: 1199px) {
+  .header .branding .container {
+    justify-content: space-between !important;
+  }
+
+  .header-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    order: 2 !important; /* logo'dan sonra, en sağda */
+  }
+
+  /* Logo tam solda dursun */
+  .header .logo {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    order: 1 !important;
+  }
+
+  /* Menü (nav) normal durumda header satırında yer kaplamasın */
+  body:not(.mobile-nav-active) #navmenu.navmenu {
+    position: absolute !important;
+    left: -9999px !important;
+    top: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+  }
+
+  /* Menü kapalıyken hamburger ikonunu flow içinde tut (float/absolute'ı ez) */
+  body:not(.mobile-nav-active) .header-actions .mobile-nav-toggle {
+    position: static !important;
+    right: auto !important;
+    top: auto !important;
+    left: auto !important;
+    float: none !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
+}
+
+/* --------------------------------------------------------------
+   Appointment modal / iframe
+-------------------------------------------------------------- */
+.appointment-iframe {
+  width: 100%;
+  height: 72vh;
+  border: 0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+@media (max-width: 576px) {
+  .appointment-iframe {
+    height: 78vh;
+  }
+}
+
+/* --------------------------------------------------------------
+   Randevu Al butonu: her zaman sabit yeşil (hover'da değişmesin)
+-------------------------------------------------------------- */
+.appointment-btn,
+.appointment-btn:focus {
+  background: #198754 !important;
+  border-color: #198754 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.appointment-btn:hover,
+.appointment-btn:focus:hover,
+.appointment-btn:active {
+  background: #198754 !important;
+  border-color: #198754 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  transform: none !important; /* .cta-btn hover translate'ını iptal et */
+  box-shadow: none !important;
+}
+

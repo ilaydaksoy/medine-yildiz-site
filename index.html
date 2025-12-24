@@ -83,10 +83,22 @@
             <li><a href="#faq">SSS</a></li>
             <li><a href="#contact">İletişim</a></li>
           </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <!-- <a class="cta-btn d-none d-sm-block" href="#appointment">Randevu Al</a> -->
+        <div class="header-actions">
+          <!-- Mobil (xs) için: hamburger yanında küçük randevu butonu -->
+          <a class="btn btn-success btn-sm rounded-pill px-3 py-1 appointment-btn d-inline-flex d-sm-none align-items-center"
+             href="#"
+             data-bs-toggle="modal"
+             data-bs-target="#appointmentModal"
+             style="font-weight:700; height:34px;">
+            Randevu Al
+          </a>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </div>
+
+        <!-- Desktop/Tablet (sm+) için -->
+        <a class="cta-btn appointment-btn d-none d-sm-block" href="#" data-bs-toggle="modal" data-bs-target="#appointmentModal">Randevu Al</a>
 
       </div>
 
@@ -136,6 +148,7 @@
         <div class="d-flex gap-4 justify-content-center flex-wrap" style="animation:fadeInUp 1.4s both;position:relative;z-index:1;">
           <a href="#about" class="btn btn-success btn-lg rounded-pill px-5 shadow-lg">Daha Fazla Bilgi</a>
           <a href="#contact" class="btn btn-orange btn-lg rounded-pill px-5 shadow-lg">Bize Ulaşın</a>
+          <a href="#" class="btn btn-success btn-lg rounded-pill px-5 shadow-lg appointment-btn" data-bs-toggle="modal" data-bs-target="#appointmentModal">Randevu Al</a>
         </div>
       </div>
       <a href="#istatistikler" class="scroll-down-anim" style="position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:4;text-decoration:none;">
@@ -1258,6 +1271,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/appointment.js"></script>
 
   <style>
   @media (max-width: 600px) {
@@ -1266,6 +1280,37 @@
     }
   }
   </style>
+
+  <!-- Appointment Modal (Google Apps Script iframe) -->
+  <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="appointmentModalLabel">Randevu Al</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+        </div>
+        <div class="modal-body">
+          <div id="appointmentSetupHint" class="alert alert-warning border small mb-3" style="display:none;">
+            Randevu entegrasyonu için URL henüz ayarlanmamış. Lütfen
+            <b>assets/js/appointment.js</b> dosyasında
+            <b>CALENDLY_URL</b> (Calendly) veya
+            <b>APPOINTMENT_WEBAPP_URL</b> (Apps Script) veya
+            <b>GOOGLE_CALENDAR_EMBED_URL</b> (Takvim embed) değerini girin.
+          </div>
+          <div class="alert alert-light border small mb-3">
+            Randevu ekranı açılmazsa
+            <a id="appointmentFallbackLink" href="#" target="_blank" rel="noopener">buraya tıklayın</a>.
+          </div>
+          <!-- Calendly inline widget -->
+          <div id="calendlyContainer" class="calendly-inline-widget" data-url="https://calendly.com/dyt-eminedemirkaya/yeni-randevu?hide_gdpr_banner=1&text_color=246b2d&primary_color=e2202b" style="min-width:320px;height:700px;"></div>
+          <iframe id="appointmentIframe" class="appointment-iframe" title="Randevu Al" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Calendly inline widget script -->
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 </body>
 

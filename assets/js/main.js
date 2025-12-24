@@ -352,10 +352,12 @@
     const ctaButtons = document.querySelectorAll('.cta-btn, .btn-primary');
     ctaButtons.forEach(btn => {
       btn.addEventListener('mouseenter', function() {
+        if (this.classList.contains('appointment-btn')) return;
         this.classList.add('pulse-button');
       });
       
       btn.addEventListener('mouseleave', function() {
+        if (this.classList.contains('appointment-btn')) return;
         this.classList.remove('pulse-button');
       });
     });
