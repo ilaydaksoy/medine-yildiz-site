@@ -60,8 +60,15 @@
 
   function mobileNavToogle() {
     document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavShow.classList.toggle('d-none');
-    mobileNavHide.classList.toggle('d-none');
+    if (mobileNavShow) mobileNavShow.classList.toggle('d-none');
+    if (mobileNavHide) mobileNavHide.classList.toggle('d-none');
+
+    // Menü açıkken ikon "X", kapalıyken hamburger olsun
+    const isOpen = document.querySelector('body').classList.contains('mobile-nav-active');
+    document.querySelectorAll('.mobile-nav-toggle').forEach((icon) => {
+      icon.classList.toggle('bi-x', isOpen);
+      icon.classList.toggle('bi-list', !isOpen);
+    });
   }
 
   /**
