@@ -4231,6 +4231,11 @@ body::before, body::after, html::before, html::after {
       box-shadow: 0 18px 60px rgba(0, 0, 0, 0.20) !important;
       padding: 64px 14px 14px 14px !important;
     }
+
+    /* Mobilde logo biraz içerden başlasın */
+    .header .logo {
+      margin-left: 12px !important;
+    }
   }
 
   .mobile-nav-active #navmenu.navmenu > ul > li {
