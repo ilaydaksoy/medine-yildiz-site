@@ -1,23 +1,20 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>NutriLife - Sağlıklı Yaşam ve Beslenme Danışmanlığı</title>
-  <meta name="description" content="Profesyonel diyetisyenlik hizmetleri, kişiye özel beslenme programları, kilo kontrolü ve sağlıklı yaşam danışmanlığı">
-  <meta name="keywords" content="diyetisyen, beslenme, kilo verme, sağlıklı yaşam, diyet programı, beslenme danışmanlığı">
+  <title>Diyetisyen Medine Yıldız | Kişiye Özel Beslenme Danışmanlığı</title>
+  <meta name="description" content="Diyetisyen Medine Yıldız ile sürdürülebilir beslenme planları, online danışmanlık ve WhatsApp üzerinden hızlı iletişim.">
+  <meta name="keywords" content="Medine Yıldız, diyetisyen, beslenme danışmanlığı, kilo kontrolü, online diyetisyen">
 
-  <!-- Favicons -->
   <link href="assets/img/favicon.webp" rel="icon">
   <link href="assets/img/apple-touch-icon.webp" rel="apple-touch-icon">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -25,1302 +22,1311 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- EmailJS -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function() {
-      emailjs.init("YOUR_PUBLIC_KEY"); // Buraya EmailJS public key gelecek
-    })();
-  </script>
+  <style>
+    .custom-hero-overlay {
+      background: linear-gradient(110deg, rgba(9, 44, 21, 0.58), rgba(25, 94, 48, 0.42));
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+    }
 
-  <!-- =======================================================
-  * Template Name: NutriLife - Diyetisyen Websitesi
-  * Updated: 2024 with Bootstrap v5.3.3
-  * Author: Custom Design
-  ======================================================== -->
+    #hero > img {
+      filter: saturate(0.86) contrast(0.95) brightness(0.86);
+    }
+
+    #hero .container {
+      background: transparent !important;
+    }
+
+    .header .branding .container {
+      max-width: 1320px !important;
+      margin: 0 auto !important;
+      padding: 0 24px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 14px !important;
+    }
+
+    .site-brand {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #256029 !important;
+      letter-spacing: 0.4px;
+      white-space: nowrap;
+      flex: 0 0 auto;
+      margin-right: 12px;
+    }
+
+    #navmenu {
+      margin-left: 0 !important;
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .section-title h2,
+    .guide-header h2 {
+      text-align: center;
+    }
+
+    .faq-minimal {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .faq-minimal .accordion-button {
+      padding-left: 1.1rem;
+      padding-right: 1.1rem;
+    }
+
+    .hero-content-card {
+      position: relative;
+      z-index: 3;
+      background: rgba(255, 255, 255, 0.93);
+      border: 1px solid rgba(255, 255, 255, 0.58);
+      border-radius: 20px;
+      box-shadow: 0 14px 44px rgba(10, 42, 20, 0.28);
+      padding: 36px 28px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .soft-badge {
+      background: #e7f8ea;
+      color: #1f7a33;
+      border-radius: 999px;
+      font-weight: 600;
+      padding: 8px 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+
+    .ai-card {
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid #dff5e4;
+      box-shadow: 0 8px 25px rgba(39, 121, 58, 0.08);
+    }
+
+    .faq-minimal .accordion-button:not(.collapsed) {
+      color: #1a6c2c;
+      background-color: #edf9f0;
+      box-shadow: none;
+    }
+
+    .faq-minimal .accordion-button:focus {
+      box-shadow: none;
+      border-color: #43d854;
+    }
+
+    .about-modern {
+      padding-top: 78px;
+      padding-bottom: 78px;
+    }
+
+    .about-modern .about-text-box {
+      background: #ffffff;
+      border: 1px solid #e5f4e9;
+      border-radius: 20px;
+      padding: 34px 30px;
+      box-shadow: 0 14px 34px rgba(27, 102, 44, 0.08);
+    }
+
+    .about-modern .about-title {
+      font-size: 2rem;
+      line-height: 1.25;
+      color: #1f6f32;
+      margin-bottom: 14px;
+    }
+
+    .about-modern .about-lead {
+      color: #3a4e40;
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+
+    .about-modern .about-list li {
+      background: #f2fbf4;
+      border: 1px solid #dcf1e0;
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+    }
+
+    .about-modern .about-image-wrap {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 16px 42px rgba(18, 86, 37, 0.22);
+      height: 520px;
+      background: #edf8f0;
+      position: relative;
+    }
+
+    .about-modern .about-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center center;
+      background: #eef7f0;
+      display: block;
+    }
+
+    .about-modern .about-badge {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      background: rgba(21, 89, 39, 0.9);
+      color: #fff;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 0.95rem;
+      line-height: 1.35;
+      max-width: 75%;
+    }
+
+    .gallery-clean .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #e3f2e7;
+      box-shadow: 0 8px 20px rgba(16, 90, 35, 0.1);
+      background: #fff;
+    }
+
+    .gallery-clean .gallery-item img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+
+    .gallery-clean .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-swiper {
+      padding: 8px 4px 46px 4px;
+    }
+
+    .gallery-swiper .swiper-slide {
+      height: auto;
+    }
+
+    .gallery-swiper .swiper-pagination-bullet-active {
+      background: #198754;
+    }
+
+    .gallery-swiper .swiper-button-next,
+    .gallery-swiper .swiper-button-prev {
+      color: #198754;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 8px 20px rgba(21, 90, 40, 0.14);
+    }
+
+    .gallery-swiper .swiper-button-next:after,
+    .gallery-swiper .swiper-button-prev:after {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .gallery-mix-card {
+      border-radius: 16px;
+      border: 1px solid #e3f2e7;
+      box-shadow: 0 8px 20px rgba(16, 90, 35, 0.1);
+      background: #fff;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .gallery-mix-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+
+    .gallery-mix-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-mix-note {
+      padding: 14px 14px 16px 14px;
+    }
+
+    .gallery-mix-note h4 {
+      font-size: 1.02rem;
+      color: #244532;
+      margin-bottom: 7px;
+    }
+
+    .gallery-mix-note p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #5a6c5f;
+      line-height: 1.45;
+    }
+
+    .wellbeing-guide {
+      background: #f5f8f4;
+    }
+
+    .guide-header {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 24px auto;
+    }
+
+    .guide-header h2 {
+      color: #1f6f32;
+      font-size: 2.1rem;
+      margin-bottom: 10px;
+    }
+
+    .guide-header p {
+      color: #4d6152;
+      margin-bottom: 18px;
+    }
+
+    .guide-all-link {
+      color: #1c7a34;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .guide-card {
+      background: #fff;
+      border: 1px solid #e1efe4;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(23, 93, 42, 0.08);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .guide-swiper {
+      padding: 6px 4px 46px 4px;
+    }
+
+    .guide-swiper .swiper-slide {
+      height: auto;
+    }
+
+    .guide-swiper .swiper-pagination-bullet-active {
+      background: #198754;
+    }
+
+    .guide-swiper .swiper-button-next,
+    .guide-swiper .swiper-button-prev {
+      color: #198754;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #ffffff;
+      box-shadow: 0 8px 20px rgba(21, 90, 40, 0.14);
+    }
+
+    .guide-swiper .swiper-button-next:after,
+    .guide-swiper .swiper-button-prev:after {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .guide-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+    }
+
+    .guide-body {
+      padding: 14px 14px 16px 14px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .guide-meta {
+      font-size: 0.82rem;
+      color: #617466;
+      margin-bottom: 8px;
+    }
+
+    .guide-title {
+      color: #24352a;
+      font-size: 1rem;
+      line-height: 1.35;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .guide-desc {
+      color: #5a6c5f;
+      font-size: 0.9rem;
+      line-height: 1.45;
+      margin-bottom: 12px;
+      flex: 1;
+    }
+
+    .guide-btn {
+      border: 1px solid #198754;
+      color: #198754;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-weight: 600;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .guide-btn:hover {
+      background: #198754;
+      color: #fff;
+    }
+
+    .calculator-modern {
+      background: #f7faf7;
+    }
+
+    .calculator-modern .calc-wrap {
+      background: #fff;
+      border: 1px solid #e2efe5;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 10px 26px rgba(21, 86, 38, 0.07);
+      height: 100%;
+    }
+
+    .calculator-modern .calc-title {
+      font-size: 1.2rem;
+      color: #1f6f32;
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .calculator-modern .form-label {
+      font-weight: 600;
+      color: #345443;
+      margin-bottom: 6px;
+    }
+
+    .calculator-modern .form-control,
+    .calculator-modern .form-select {
+      border: 1px solid #d4e8d9;
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+
+    .calculator-modern .form-control:focus,
+    .calculator-modern .form-select:focus {
+      border-color: #198754;
+      box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.14);
+    }
+
+    .calculator-modern .result-box {
+      background: #eff9f2;
+      border: 1px solid #d8eddc;
+      border-radius: 12px;
+      padding: 14px;
+      margin-top: 14px;
+    }
+
+    .service-inline-note {
+      display: inline-block;
+      margin-left: 10px;
+      padding-left: 10px;
+      border-left: 2px solid #87c89a;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #2f7f46;
+      vertical-align: middle;
+    }
+
+    .ai-float-wrap {
+      position: fixed;
+      right: 16px;
+      bottom: 84px;
+      z-index: 9998;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .ai-float-panel {
+      width: 320px;
+      background: #ffffff;
+      border: 1px solid #d8f0df;
+      border-radius: 14px;
+      box-shadow: 0 10px 26px rgba(23, 88, 40, 0.18);
+      overflow: hidden;
+      display: none;
+    }
+
+    .ai-float-panel.open {
+      display: block;
+      animation: fadeInUpPanel 0.25s ease;
+    }
+
+    .ai-float-head {
+      background: linear-gradient(120deg, #2dae45, #43d854);
+      color: #fff;
+      padding: 10px 12px;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .ai-float-body {
+      padding: 12px;
+      font-size: 14px;
+      color: #29402f;
+    }
+
+    .ai-mini-answer {
+      background: #f2fbf4;
+      border: 1px solid #ddf3e2;
+      border-radius: 10px;
+      padding: 9px 10px;
+      margin-bottom: 8px;
+    }
+
+    .ai-mini-input {
+      border: 1px solid #d3e9d8;
+      border-radius: 10px;
+      padding: 9px 11px;
+      width: 100%;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #29402f;
+    }
+
+    .ai-mini-input:focus {
+      outline: none;
+      border-color: #198754;
+      box-shadow: 0 0 0 2px rgba(25, 135, 84, 0.14);
+    }
+
+    .ai-mini-send {
+      width: 100%;
+      border: 0;
+      border-radius: 999px;
+      background: #198754;
+      color: #fff;
+      font-weight: 600;
+      padding: 9px 12px;
+      margin-bottom: 8px;
+    }
+
+    .ai-float-btn {
+      background: #198754;
+      color: #fff;
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(25, 135, 84, 0.3);
+    }
+
+    @media (max-width: 576px) {
+      .ai-float-wrap {
+        right: 10px;
+        bottom: 78px;
+      }
+      .ai-float-panel {
+        width: calc(100vw - 20px);
+        max-width: 330px;
+      }
+    }
+
+    @keyframes fadeInUpPanel {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header .branding .container {
+        padding: 0 12px !important;
+      }
+
+      .site-brand {
+        font-size: 1rem;
+      }
+
+      .about-modern {
+        padding-top: 48px;
+        padding-bottom: 48px;
+      }
+
+      .about-modern .about-text-box {
+        padding: 22px 18px;
+      }
+
+      .about-modern .about-title {
+        font-size: 1.55rem;
+      }
+
+      .about-modern .about-image-wrap {
+        height: 320px;
+      }
+
+      .gallery-clean .gallery-item img,
+      .gallery-mix-card img {
+        height: 190px;
+      }
+
+      .guide-header h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
 
 <body class="index-page">
-
   <header id="header" class="header sticky-top">
-
-    <div class="topbar d-flex align-items-center">
-      <div class="container d-flex justify-content-center justify-content-md-between">
-        <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@nutrilife.com">info@nutrilife.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+90 505 844 60 46</span></i>
-        </div>
-        <div class="social-links d-none d-md-flex align-items-center">
-          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        </div>
-      </div>
-    </div><!-- End Top Bar -->
-
     <div class="branding d-flex align-items-center">
-
       <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <img src="assets/img/gallery/logo.webp" alt="Emine Demir Kaya Logo" style="max-height:80px; width:auto;">
-          <span class="logo-title-responsive" style="font-size:1.3rem; font-weight:700; color:#256029; letter-spacing:1px; font-family:'Poppins',sans-serif; line-height:1.1; display:block; margin-left:4px;">
-            EMİNE<br><span style="white-space:nowrap; color:#256029; font-family:'Poppins',sans-serif;">DEMİR KAYA</span>
-          </span>
+        <a href="index.html" class="site-brand">
+          Dyt. Medine Yıldız
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <!-- Mobil menüde üstte ekstra aksiyon -->
-            <li class="nav-appointment d-xl-none">
-              <a class="appointment-btn w-100 justify-content-center"
-                 href="javascript:void(0)"
-                 data-bs-toggle="modal"
-                 data-bs-target="#appointmentModal">
-                Randevu Al
-              </a>
-            </li>
-            <li><a href="#hero">Ana Sayfa</a></li>
-            <li><a href="#about">Hakkımızda</a></li>
-            <li><a href="#programs">Programlar</a></li>
+            <li><a href="#hero" class="active">Ana Sayfa</a></li>
+            <li><a href="#about">Hakkımda</a></li>
             <li><a href="#services">Hizmetler</a></li>
-            <li><a href="#dietitians">Diyetisyenler</a></li>
-            <li><a href="#calculator">Hesaplayıcılar</a></li>
+            <li><a href="#calculator">Hesaplayıcı</a></li>
+            <li><a href="#testimonials">Danışan Yorumları</a></li>
             <li><a href="#faq">SSS</a></li>
+            <li><a href="#gallery">Galeri</a></li>
             <li><a href="#contact">İletişim</a></li>
           </ul>
         </nav>
 
-        <div class="header-actions">
-          <!-- Mobil (xs) için: hamburger yanında küçük randevu butonu -->
-          <a class="btn btn-success btn-sm rounded-pill px-3 py-1 appointment-btn d-inline-flex d-sm-none align-items-center"
-             href="#"
-             data-bs-toggle="modal"
-             data-bs-target="#appointmentModal"
-             style="font-weight:700; height:34px;">
-            Randevu Al
-          </a>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </div>
+        <a class="cta-btn appointment-btn d-none d-sm-block" href="#" id="headerWhatsappBtn">
+          <i class="fab fa-whatsapp"></i> WhatsApp'a Yaz
+        </a>
 
-        <!-- Desktop/Tablet (sm+) için -->
-        <a class="cta-btn appointment-btn d-none d-sm-block" href="#" data-bs-toggle="modal" data-bs-target="#appointmentModal">Randevu Al</a>
-
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </div>
-
     </div>
-
   </header>
 
   <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section light-background" style="min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
-      <img src="assets/img/gallery/hero-bg.webp" alt="Diyetisyen" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:1;">
-      <div style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;"></div>
-      <div class="container position-relative d-flex flex-column align-items-center justify-content-center text-center hero-apple-bg" style="z-index:3;min-height:48vh;border-radius:32px;box-shadow:0 8px 32px #2221;">
-        <svg class="hero-apple-svg" width="420" height="420" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);opacity:0.10;z-index:0;">
-          <path d="M210 370c-60 0-130-40-130-120 0-60 50-90 80-90 20 0 30 10 50 10s30-10 50-10c30 0 80 30 80 90 0 80-70 120-130 120z" fill="#fff"/>
-          <ellipse cx="210" cy="120" rx="30" ry="18" fill="#fff"/>
-          <path d="M210 80c-10-30 30-60 60-40" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
-        </svg>
-        <div style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 32px;">
-          <span class="hero-emoji-inline" style="position:absolute;left:-6.2rem;top:-3.2rem;font-size:6.2rem;">🍏</span>
-          <span class="hero-emoji-inline" style="position:absolute;right:-6.2rem;bottom:-3.2rem;font-size:6.2rem;">🥕</span>
-          <h1 class="hero-title" style="font-size:3.7rem;font-weight:700;line-height:1.08;background:linear-gradient(90deg,#228B22 0%,#43d854 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:fadeInDown 1s both;position:relative;z-index:1; padding: 0 2.5rem;">
-            Sağlıklı Yaşam İçin
-            <br>
-            <span style="font-size:2.2rem;font-weight:500;">Profesyonel Diyetisyenlik</span>
-          </h1>
-        </div>
-        <style>
-        .hero-emoji-inline {
-          animation: hero-emoji-float 2.2s cubic-bezier(.68,-0.55,.27,1.55) infinite alternate;
-          user-select: none;
-          pointer-events: none;
-          filter: drop-shadow(0 2px 6px #b2dfdb);
-        }
-        .hero-emoji-inline:nth-child(1) { animation-delay: 0.1s; }
-        .hero-emoji-inline:nth-child(2) { animation-delay: 0.4s; }
-        .hero-emoji-inline:nth-child(3) { animation-delay: 0.7s; }
-        .hero-emoji-inline:nth-child(4) { animation-delay: 1.0s; }
-        @keyframes hero-emoji-float {
-          0% { transform: translateY(0) scale(1); }
-          60% { transform: translateY(-10px) scale(1.08); }
-          100% { transform: translateY(-18px) scale(1.12); }
-        }
-        </style>
-        <p class="hero-desc" style="font-size:1.5rem;color:#222;font-family:'Poppins',sans-serif;font-weight:600;font-style:italic;margin:28px 0 40px 0;animation:fadeInUp 1.2s both;position:relative;z-index:1;">Kişiye özel beslenme programları, bilimsel yaklaşım ve sürdürülebilir sağlıklı yaşam için yanınızdayız.</p>
-        <div class="d-flex gap-4 justify-content-center flex-wrap" style="animation:fadeInUp 1.4s both;position:relative;z-index:1;">
-          <a href="#about" class="btn btn-success btn-lg rounded-pill px-5 shadow-lg">Daha Fazla Bilgi</a>
-          <a href="#contact" class="btn btn-orange btn-lg rounded-pill px-5 shadow-lg">Bize Ulaşın</a>
-          <a href="#" class="btn btn-success btn-lg rounded-pill px-5 shadow-lg appointment-btn" data-bs-toggle="modal" data-bs-target="#appointmentModal">Randevu Al</a>
-        </div>
-      </div>
-      <a href="#istatistikler" class="scroll-down-anim" style="position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:4;text-decoration:none;">
-        <span style="display:inline-block;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#43d854 60%,#2196f3 100%);box-shadow:0 2px 16px #2196f366;display:flex;align-items:center;justify-content:center;animation:bounce 1.5s infinite alternate;">
-          <i class="bi bi-chevron-double-down" style="font-size:2.5rem;color:#fff;"></i>
-        </span>
-      </a>
-      <style>
-        .hero-apple-bg { position:relative; }
-        .hero-apple-svg { pointer-events:none; }
-        @keyframes fadeInDown {from{opacity:0;transform:translateY(-40px);}to{opacity:1;transform:none;}}
-        @keyframes fadeInUp {from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:none;}}
-        @keyframes bounce {0%{transform:translateY(0);}100%{transform:translateY(18px);}}
-      </style>
-      <!-- Hero köşe emojileri -->
-     
-      <style>
-      .hero-emoji {
-        position: absolute;
-        z-index: 4;
-        pointer-events: none;
-        user-select: none;
-        animation: hero-emoji-float 2.5s ease-in-out infinite alternate;
-      }
-      .hero-emoji:nth-child(2) { animation-delay: 0.3s; }
-      .hero-emoji:nth-child(3) { animation-delay: 0.6s; }
-      .hero-emoji:nth-child(4) { animation-delay: 0.9s; }
-      .hero-emoji:nth-child(5) { animation-delay: 1.2s; }
-      .hero-emoji:nth-child(6) { animation-delay: 1.5s; }
-      @keyframes hero-emoji-float {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(-18px); }
-      }
-      .hero-title, .hero-desc, .d-flex.gap-4 { text-align: center !important; margin-left: auto !important; margin-right: auto !important; display: block !important; }
-      </style>
-    </section>
-
-    <!-- İstatistikler/Hizmetler Bölümü -->
-    <section id="istatistikler" class="section py-5" style="min-height:420px;background:#fff;">
-      <div class="container">
-        <div class="row justify-content-center align-items-stretch g-4">
-          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="stat-card text-center p-4 h-100 d-flex flex-column align-items-center justify-content-center stat-green">
-              <i class="bi bi-clipboard-data animated-icon mb-3" style="font-size:3rem;"></i>
-              <div class="fs-1 fw-bold">8+</div>
-              <div class="fw-semibold">Yıllık Tecrübe</div>
-            </div>
-          </div>
-          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="stat-card text-center p-4 h-100 d-flex flex-column align-items-center justify-content-center stat-green">
-              <i class="bi bi-emoji-smile animated-icon mb-3" style="font-size:3rem;"></i>
-              <div class="fs-1 fw-bold">250+</div>
-              <div class="fw-semibold">Mutlu Danışan</div>
-            </div>
-          </div>
-          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="stat-card text-center p-4 h-100 d-flex flex-column align-items-center justify-content-center stat-green">
-              <i class="bi bi-heart-pulse animated-icon mb-3" style="font-size:3rem;"></i>
-              <div class="fs-1 fw-bold">1200+</div>
-              <div class="fw-semibold">Başarı Hikayesi</div>
-            </div>
-          </div>
-          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="stat-card text-center p-4 h-100 d-flex flex-column align-items-center justify-content-center stat-green">
-              <i class="bi bi-cup-straw animated-icon mb-3" style="font-size:3rem;"></i>
-              <div class="fs-1 fw-bold">20+</div>
-              <div class="fw-semibold">Farklı Program</div>
-            </div>
+    <section id="hero" class="hero section light-background" style="min-height:66vh; position:relative; padding-top:24px; padding-bottom:24px;">
+      <img src="assets/img/about.jpg" alt="Diyetisyen danışmanlığı arka planı">
+      <div class="custom-hero-overlay"></div>
+      <div class="container" data-aos="fade-up">
+        <div class="hero-content-card text-center">
+          <span class="soft-badge mb-3"><i class="bi bi-heart-pulse"></i> Sürdürülebilir ve gerçekçi beslenme</span>
+          <h1 class="mb-3" style="font-size:2.6rem; color:#1f6f32;">Diyetisyen Medine Yıldız ile<br>sağlıklı dönüşüm süreci</h1>
+          <p class="mb-4" style="font-size:1.1rem; color:#29402f; max-width:760px; margin:0 auto;">
+            Randevu formu yerine doğrudan WhatsApp iletişimi ile hızlı başlangıç yapın. Süreciniz, günlük yaşama uygun, esnek ve kişisel planlarla ilerlesin.
+          </p>
+          <div class="d-flex flex-wrap gap-3 justify-content-center">
+            <a href="#about" class="btn btn-success btn-lg rounded-pill px-4">Yaklaşımım</a>
+            <a href="#" id="heroWhatsappBtn" class="btn btn-outline-success btn-lg rounded-pill px-4">
+              <i class="fab fa-whatsapp"></i> Hemen Yazın
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-
+    <section id="about" class="about section about-modern light-background">
       <div class="container">
-
-        <div class="row gy-4 gx-5">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="content ps-lg-5">
-              <h3 class="slide-left">Sağlıklı Yaşam İçin Profesyonel Beslenme Danışmanlığı</h3>
-              <p class="slide-right">
-                NutriLife olarak, modern beslenme biliminin en güncel araştırmalarını kullanarak 
-                kişiye özel beslenme programları hazırlıyoruz. Uzman diyetisyenlerimiz, 
-                her bireyin benzersiz ihtiyaçlarını analiz ederek en uygun beslenme stratejisini belirliyor.
-              </p>
-              <ul class="slide-left">
-                <li><i class="fas fa-apple-alt floating-icon"></i> Kişiye özel beslenme programları</li>
-                <li><i class="fas fa-carrot floating-icon"></i> Bilimsel ve kanıta dayalı yaklaşım</li>
-                <li><i class="fas fa-leaf floating-icon"></i> Düzenli takip ve destek</li>
-                <li><i class="fas fa-seedling floating-icon"></i> Sürdürülebilir yaşam tarzı değişiklikleri</li>
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="about-text-box">
+              <h2 class="about-title">Merhaba, ben Dyt. Medine Yıldız</h2>
+              <p class="about-lead">Danışanlarımla kısa süreli, yorucu listeler yerine uzun vadeli beslenme alışkanlığı kurmaya odaklanıyorum. Her plan yaşam düzeninize göre şekillenir.</p>
+              <ul class="list-unstyled mt-3 about-list">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Kişiye özel takip ve planlama</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Pratik, günlük hayata uygun menüler</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Haftalık geri bildirim ve motivasyon desteği</li>
               </ul>
-              <p class="slide-right">
-                Sağlıklı yaşam hedeflerinize ulaşmanızda size rehberlik etmek için buradayız. 
-                Kilo kontrolü, sporcu beslenmesi, hamilelik beslenmesi ve hastalık beslenmesi 
-                konularında uzman kadromuzla hizmetinizdeyiz.
-              </p>
-              <div class="text-center mt-4">
-                <!-- <a href="#contact" class="cta-btn pulse-button">Randevu Al</a> -->
-                <a href="https://wa.me/905058446046" class="cta-btn pulse-button ms-3" target="_blank">
-                  <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-              </div>
+              <a href="#" id="aboutWhatsappBtn" class="cta-btn mt-3 d-inline-block"><i class="fab fa-whatsapp"></i> WhatsApp'tan Bilgi Al</a>
             </div>
           </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="position-relative mt-4">
-              <img src="assets/img/about.jpg" class="img-fluid rounded" alt="Diyetisyen Konsültasyonu">
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Programs Section -->
-    <section id="programs" class="departments section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Beslenme Programları</h2>
-        <p>Farklı ihtiyaçlarınıza uygun özel beslenme programlarımız</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row">
-          <div class="col-lg-3">
-            <ul class="nav nav-tabs flex-column">
-              <li class="nav-item">
-                <a class="nav-link active show" data-bs-toggle="tab" href="#weight-loss">
-                  <i class="fas fa-weight-scale me-2"></i>Kilo Verme
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#weight-gain">
-                  <i class="fas fa-dumbbell me-2"></i>Kilo Alma
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#sports">
-                  <i class="fas fa-running me-2"></i>Sporcu Beslenmesi
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#pregnancy">
-                  <i class="fas fa-baby me-2"></i>Hamilelik Beslenmesi
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#diabetes">
-                  <i class="fas fa-heartbeat me-2"></i>Diyabet Beslenmesi
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-9 mt-4 mt-lg-0">
-            <div class="tab-content">
-              <div class="tab-pane active show" id="weight-loss">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3><i class="fas fa-weight-scale text-success me-2"></i>Kilo Verme Programı</h3>
-                    <p class="fst-italic">Sağlıklı ve kalıcı kilo verme için kişiye özel beslenme programları</p>
-                    <p>Kilo verme programımız sadece kalori kısıtlaması değil, sürdürülebilir yaşam tarzı değişiklikleri üzerine kuruludur. Vücut analizi, metabolizma ölçümü ve kişisel tercihlerinize göre hazırlanan programlar ile hedeflerinize ulaşın.</p>
-                    <div class="row mt-4">
-                      <div class="col-md-6">
-                        <h5><i class="fas fa-check-circle text-success me-2"></i>Program İçeriği:</h5>
-                        <ul class="list-unstyled">
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Kişiye özel kalori hesaplaması</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Haftalık beslenme planları</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Düzenli takip ve motivasyon</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Egzersiz önerileri</li>
-                        </ul>
-                      </div>
-                      <div class="col-md-6">
-                        <h5><i class="fas fa-star text-warning me-2"></i>Faydalar:</h5>
-                        <ul class="list-unstyled">
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Kalıcı kilo kaybı</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Metabolizma hızlandırma</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Enerji seviyesi artışı</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Sağlıklı yaşam alışkanlıkları</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="mt-4">
-                      <!-- <a href="#appointment" class="cta-btn">Randevu Al</a> -->
-                    </div>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <!-- Görsel kaldırıldı -->
-                  </div>
-                </div>
-              </div>
-              
-              <div class="tab-pane" id="weight-gain">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3><i class="fas fa-dumbbell text-success me-2"></i>Kilo Alma Programı</h3>
-                    <p class="fst-italic">Sağlıklı kilo alma ve kas geliştirme için özel beslenme planları</p>
-                    <p>Kilo alma programımız sadece kalori artışı değil, doğru besin seçimleri ve zamanlama üzerine kuruludur. Kas kütlesi artışını destekleyen, yağ oranını kontrol altında tutan programlar ile sağlıklı kilo alın.</p>
-                    <div class="row mt-4">
-                      <div class="col-md-6">
-                        <h5><i class="fas fa-check-circle text-success me-2"></i>Program İçeriği:</h5>
-                        <ul class="list-unstyled">
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Yüksek kalorili beslenme planları</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Protein ağırlıklı beslenme</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Besin takviyesi önerileri</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Egzersiz programı eşliğinde</li>
-                        </ul>
-                      </div>
-                      <div class="col-md-6">
-                        <h5><i class="fas fa-star text-warning me-2"></i>Faydalar:</h5>
-                        <ul class="list-unstyled">
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Kas kütlesi artışı</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Güç artışı</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Vücut kompozisyonu iyileştirme</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Performans artışı</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="mt-4">
-                      <!-- <a href="#appointment" class="cta-btn">Randevu Al</a> -->
-                    </div>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <!-- Görsel kaldırıldı -->
-                  </div>
-                </div>
-              </div>
-              
-              <div class="tab-pane" id="sports">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3><i class="fas fa-running text-success me-2"></i>Sporcu Beslenmesi</h3>
-                    <p class="fst-italic">Performansınızı artırmak için özel sporcu beslenme programları</p>
-                    <p>Sporcu beslenmesi programımız antrenman öncesi, sırası ve sonrası beslenme stratejilerini içerir. Kas gelişimi, dayanıklılık artışı ve toparlanma süreçlerini destekleyen beslenme planları hazırlıyoruz.</p>
-                    <div class="row mt-4">
-                      <div class="col-md-6">
-                        <h5><i class="fas fa-check-circle text-success me-2"></i>Program İçeriği:</h5>
-                        <ul class="list-unstyled">
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Antrenman öncesi beslenme</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Antrenman sırası hidrasyon</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Toparlanma beslenmesi</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Yarışma öncesi beslenme</li>
-                        </ul>
-                      </div>
-                      <div class="col-md-6">
-                        <h5><i class="fas fa-star text-warning me-2"></i>Faydalar:</h5>
-                        <ul class="list-unstyled">
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Performans artışı</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Hızlı toparlanma</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Kas gelişimi</li>
-                          <li><i class="fas fa-arrow-right text-success me-2"></i>Dayanıklılık artışı</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="mt-4">
-                      <!-- <a href="#appointment" class="cta-btn">Randevu Al</a> -->
-                    </div>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <!-- Görsel kaldırıldı -->
-                  </div>
-                </div>
-              </div>
-              
-              <div class="tab-pane" id="pregnancy">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3><i class="fas fa-baby text-success me-2"></i>Hamilelik Beslenmesi</h3>
-                    <p class="fst-italic">Anne ve bebek sağlığı için özel hamilelik beslenme programları</p>
-                    <p>Hamilelik döneminde doğru beslenme hem anne hem de bebek sağlığı için kritik öneme sahiptir. Her trimester için özel beslenme planları ve gerekli besin takviyeleri konusunda rehberlik ediyoruz.</p>
-                    <ul class="list-unstyled">
-                      <li><i class="fas fa-arrow-right text-success me-2"></i>Trimester bazlı beslenme</li>
-                      <li><i class="fas fa-arrow-right text-success me-2"></i>Folik asit ve demir takviyesi</li>
-                      <li><i class="fas fa-arrow-right text-success me-2"></i>Bulantı ve mide yanması için öneriler</li>
-                      <li><i class="fas fa-arrow-right text-success me-2"></i>Gebelik diyabeti önleme</li>
-                    </ul>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <!-- Görsel kaldırıldı -->
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane" id="diabetes">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3><i class="fas fa-heartbeat text-success me-2"></i>Diyabet Beslenmesi</h3>
-                    <p class="fst-italic">Kan şekeri kontrolü için özel diyabet beslenme programları</p>
-                    <p>Diyabet beslenmesi programımız kan şekeri kontrolünü sağlarken, yaşam kalitenizi artırmayı hedefler. Karbonhidrat sayımı, glisemik indeks ve porsiyon kontrolü konularında eğitim veriyoruz.</p>
-                    <ul class="list-unstyled">
-                      <li><i class="fas fa-arrow-right text-success me-2"></i>Karbonhidrat sayımı eğitimi</li>
-                      <li><i class="fas fa-arrow-right text-success me-2"></i>Glisemik indeks kontrolü</li>
-                      <li><i class="fas fa-arrow-right text-success me-2"></i>Porsiyon kontrolü</li>
-                      <li><i class="fas fa-arrow-right text-success me-2"></i>Kan şekeri takibi</li>
-                    </ul>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <!-- Görsel kaldırıldı -->
-                  </div>
-                </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="about-image-wrap">
+              <img src="assets/img/gallery/WhatsApp%20Image%202026-04-28%20at%2004.05.20.jpeg" alt="Dyt. Medine Yıldız">
+              <div class="about-badge">
+                Bilimsel yaklaşım + uygulanabilir plan<br>
+                <strong>Hedef: sürdürülebilir sonuç</strong>
               </div>
             </div>
           </div>
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Programs Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
+    <section id="services" class="services section light-background">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Hizmetlerimiz</h2>
-        <p>Sağlıklı yaşam hedeflerinize ulaşmanız için sunduğumuz kapsamlı beslenme danışmanlığı hizmetleri</p>
-      </div><!-- End Section Title -->
-
+        <h2>Hizmet Alanları</h2>
+        <p>Günlük hayata uyumlu, sade ve sürdürülebilir programlar</p>
+      </div>
       <div class="container">
-
         <div class="row gy-4">
-
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item green-card position-relative">
-              <div class="icon">
-                <i class="fas fa-weight-scale floating-icon"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Kilo Kontrolü</h3>
-              </a>
-              <p>Kilo verme, kilo alma veya mevcut kilonuzu koruma konusunda kişiye özel beslenme programları hazırlıyoruz.</p>
+              <div class="icon"><i class="fas fa-clinic-medical"></i></div>
+              <h3>Yüz Yüze Danışmanlık <span class="service-inline-note">Online da var</span></h3>
+              <p>Ofiste birebir görüşme, ölçüm takibi ve yaşam düzeninize uygun kişisel beslenme planlaması yapılır.</p>
             </div>
-          </div><!-- End Service Item -->
-
+          </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item green-card position-relative">
-              <div class="icon">
-                <i class="fas fa-dumbbell floating-icon"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Sporcu Beslenmesi</h3>
-              </a>
-              <p>Performansınızı artırmak ve kas gelişiminizi desteklemek için özel sporcu beslenme programları.</p>
+              <div class="icon"><i class="fas fa-weight-scale"></i></div>
+              <h3>Kilo Yönetimi</h3>
+              <p>Kilo verme veya koruma hedefiniz için esnek planlama ve düzenli takip.</p>
             </div>
-          </div><!-- End Service Item -->
-
+          </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item green-card position-relative">
-              <div class="icon">
-                <i class="fas fa-baby floating-icon"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Hamilelik Beslenmesi</h3>
-              </a>
-              <p>Hamilelik döneminde anne ve bebek sağlığı için özel beslenme planları ve danışmanlık.</p>
+              <div class="icon"><i class="fas fa-seedling"></i></div>
+              <h3>Yaşam Tarzı Beslenmesi</h3>
+              <p>Yoğun iş temposunda uygulanabilir, gerçek hayat odaklı beslenme düzeni.</p>
             </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item green-card position-relative">
-              <div class="icon">
-                <i class="fas fa-heartbeat floating-icon"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Hastalık Beslenmesi</h3>
-              </a>
-              <p>Diyabet, kalp hastalıkları, tansiyon gibi hastalıklarda özel beslenme programları.</p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item green-card position-relative">
-              <div class="icon">
-                <i class="fas fa-apple-alt floating-icon"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Besin Analizi</h3>
-              </a>
-              <p>Vücut analizi, metabolizma ölçümü ve detaylı beslenme değerlendirmesi hizmetleri.</p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item green-card position-relative">
-              <div class="icon">
-                <i class="fas fa-laptop-medical floating-icon"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Online Danışmanlık</h3>
-              </a>
-              <p>Uzaktan görüşme ile online beslenme danışmanlığı ve takip hizmetleri.</p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
+          </div>
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Services Section -->
-
-    <!-- Dietitians Section -->
-    <section id="dietitians" class="doctors section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Uzman Diyetisyenlerimiz</h2>
-        <p>Deneyimli ve uzman diyetisyenlerimiz ile sağlıklı yaşam yolculuğunuzda yanınızdayız</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic d-flex align-items-center justify-content-center" style="background:#f3f3f3;width:150px;height:150px;border-radius:50%;font-size:4rem;color:#43d854;">
-                <i class="fas fa-user-md"></i>
-              </div>
-              <div class="member-info">
-                <h4>Uzm. Dyt. Emine Demir KAYA</h4>
-                <span>Baş Diyetisyen - Kilo Kontrolü Uzmanı</span>
-                <p>10 yıllık deneyimi ile kilo kontrolü ve beslenme danışmanlığı konusunda uzmanlaşmıştır. Kişiye özel beslenme programları hazırlar.</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic d-flex align-items-center justify-content-center" style="background:#f3f3f3;width:150px;height:150px;border-radius:50%;font-size:4rem;color:#43d854;">
-                <i class="fas fa-user-md"></i>
-              </div>
-              <div class="member-info">
-                <h4>Uzm. Dyt. Yana ESEN</h4>
-                <span>Sporcu Beslenmesi Uzmanı</span>
-                <p>Sporcu beslenmesi ve performans artırma konusunda uzmanlaşmıştır. Profesyonel sporcular ile çalışmaktadır.</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Dietitians Section -->
-
-    <!-- Calculator Section -->
-    <section id="calculator" class="calculator section light-background">
-
-      <!-- Section Title -->
+    <section id="calculator" class="section calculator-modern">
       <div class="container section-title" data-aos="fade-up">
         <h2>Beslenme Hesaplayıcıları</h2>
-        <p>Sağlıklı yaşam için ihtiyacınız olan hesaplamaları kolayca yapın</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
+        <p>BMI ve günlük kalori ihtiyacını hızlıca hesaplayarak sürece bilinçli başlayın.</p>
+      </div>
+      <div class="container">
+        <div class="row g-4">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="calculator-card green-card">
-              <div class="calculator-header">
-                <i class="fas fa-calculator floating-icon"></i>
-                <h3>BMI Hesaplayıcı</h3>
-              </div>
-              <div class="calculator-body">
-                <form id="bmiForm">
-                  <div class="form-group">
-                    <label for="bmiWeight">Kilonuz (kg)</label>
-                    <input type="number" class="form-control" id="bmiWeight" placeholder="Örn: 70" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="bmiHeight">Boyunuz (cm)</label>
-                    <input type="number" class="form-control" id="bmiHeight" placeholder="Örn: 170" required>
-                  </div>
-                  <div class="text-end">
-                    <button type="submit" class="btn btn-primary pulse-button">Hesapla</button>
-                  </div>
-                </form>
-                <div id="bmiResult" class="result-box" style="display: none;">
-                  <h4>BMI Sonucunuz</h4>
-                  <div class="bmi-value">
-                    <span id="bmiValue">0</span>
-                    <small>kg/m²</small>
-                  </div>
-                  <div class="bmi-category">
-                    <span id="bmiCategory">Normal</span>
-                  </div>
+            <div class="calc-wrap">
+              <h3 class="calc-title"><i class="bi bi-calculator"></i> BMI Hesaplayıcı</h3>
+              <form id="bmiForm">
+                <div class="mb-3">
+                  <label for="bmiWeight" class="form-label">Kilo (kg)</label>
+                  <input type="number" class="form-control" id="bmiWeight" placeholder="Örn: 70" required>
                 </div>
+                <div class="mb-3">
+                  <label for="bmiHeight" class="form-label">Boy (cm)</label>
+                  <input type="number" class="form-control" id="bmiHeight" placeholder="Örn: 170" required>
+                </div>
+                <button type="submit" class="btn btn-success rounded-pill px-4">Hesapla</button>
+              </form>
+              <div id="bmiResult" class="result-box" style="display:none;">
+                <h4 class="mb-2">BMI Sonucunuz</h4>
+                <div><strong id="bmiValue">0</strong> kg/m²</div>
+                <div class="mt-1">Kategori: <span id="bmiCategory">Normal</span></div>
               </div>
             </div>
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="calculator-card green-card">
-              <div class="calculator-header">
-                <i class="fas fa-fire floating-icon"></i>
-                <h3>Günlük Kalori İhtiyacı</h3>
-              </div>
-              <div class="calculator-body">
-                <form id="calorieForm">
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="form-group">
-                        <label for="calorieAge">Yaşınız</label>
-                        <input type="number" class="form-control" id="calorieAge" placeholder="Örn: 30" required>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="form-group">
-                        <label for="calorieGender">Cinsiyet</label>
-                        <select class="form-select" id="calorieGender" required>
-                          <option value="">Seçiniz</option>
-                          <option value="male">Erkek</option>
-                          <option value="female">Kadın</option>
-                        </select>
-                      </div>
-                    </div>
+            <div class="calc-wrap">
+              <h3 class="calc-title"><i class="bi bi-fire"></i> Günlük Kalori İhtiyacı</h3>
+              <form id="calorieForm">
+                <div class="row g-2">
+                  <div class="col-md-6 mb-2">
+                    <label for="calorieAge" class="form-label">Yaş</label>
+                    <input type="number" class="form-control" id="calorieAge" placeholder="30" required>
                   </div>
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="form-group">
-                        <label for="calorieWeight">Kilonuz (kg)</label>
-                        <input type="number" class="form-control" id="calorieWeight" placeholder="Örn: 70" required>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="form-group">
-                        <label for="calorieHeight">Boyunuz (cm)</label>
-                        <input type="number" class="form-control" id="calorieHeight" placeholder="Örn: 170" required>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="calorieActivity">Aktivite Seviyesi</label>
-                    <select class="form-select" id="calorieActivity" required>
+                  <div class="col-md-6 mb-2">
+                    <label for="calorieGender" class="form-label">Cinsiyet</label>
+                    <select class="form-select" id="calorieGender" required>
                       <option value="">Seçiniz</option>
-                      <option value="1.2">Hareketsiz (Az hareket)</option>
-                      <option value="1.375">Hafif Aktif (Haftada 1-3 gün egzersiz)</option>
-                      <option value="1.55">Orta Aktif (Haftada 3-5 gün egzersiz)</option>
-                      <option value="1.725">Çok Aktif (Haftada 6-7 gün egzersiz)</option>
-                      <option value="1.9">Aşırı Aktif (Günde 2 kez egzersiz)</option>
+                      <option value="male">Erkek</option>
+                      <option value="female">Kadın</option>
                     </select>
                   </div>
-                  <div class="text-end">
-                    <button type="submit" class="btn btn-primary pulse-button">Hesapla</button>
+                  <div class="col-md-6 mb-2">
+                    <label for="calorieWeight" class="form-label">Kilo (kg)</label>
+                    <input type="number" class="form-control" id="calorieWeight" placeholder="70" required>
                   </div>
-                </form>
-                <div id="calorieResult" class="result-box" style="display: none;">
-                  <h4>Günlük Kalori İhtiyacınız</h4>
-                  <div class="calorie-value">
-                    <span id="calorieValue">0</span>
-                    <small>kalori/gün</small>
+                  <div class="col-md-6 mb-2">
+                    <label for="calorieHeight" class="form-label">Boy (cm)</label>
+                    <input type="number" class="form-control" id="calorieHeight" placeholder="170" required>
                   </div>
-                  <div class="calorie-breakdown">
-                    <div class="row">
-                      <div class="col-4">
-                        <div class="macro-item">
-                          <span id="proteinValue">0g</span>
-                          <small>Protein</small>
-                        </div>
-                      </div>
-                      <div class="col-4">
-                        <div class="macro-item">
-                          <span id="carbValue">0g</span>
-                          <small>Karbonhidrat</small>
-                        </div>
-                      </div>
-                      <div class="col-4">
-                        <div class="macro-item">
-                          <span id="fatValue">0g</span>
-                          <small>Yağ</small>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="calorieActivity" class="form-label">Aktivite Seviyesi</label>
+                  <select class="form-select" id="calorieActivity" required>
+                    <option value="">Seçiniz</option>
+                    <option value="1.2">Hareketsiz</option>
+                    <option value="1.375">Hafif Aktif</option>
+                    <option value="1.55">Orta Aktif</option>
+                    <option value="1.725">Çok Aktif</option>
+                    <option value="1.9">Aşırı Aktif</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-success rounded-pill px-4">Hesapla</button>
+              </form>
+              <div id="calorieResult" class="result-box" style="display:none;">
+                <h4 class="mb-2">Tahmini Günlük Kalori</h4>
+                <div><strong id="calorieValue">0</strong> kalori/gün</div>
+                <div class="mt-2 small">
+                  Protein: <span id="proteinValue">0g</span> |
+                  Karbonhidrat: <span id="carbValue">0g</span> |
+                  Yağ: <span id="fatValue">0g</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Calculator Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-
+    <section id="testimonials" class="testimonials section light-background">
       <div class="container">
-
         <div class="row align-items-center">
-
-          <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
-            <h3>Müşteri Yorumları</h3>
-            <p>
-              Sağlıklı yaşam yolculuğunda başarılı olan müşterilerimizin deneyimleri. 
-              NutriLife ile hedeflerine ulaşan kişilerin gerçek hikayeleri.
-            </p>
+          <div class="col-lg-5 info" data-aos="fade-right">
+            <h3>Danışan Yorumları</h3>
+            <p>Takip sürecinde sürdürülebilir değişim yaşayan danışanlardan kısa geri bildirimler.</p>
           </div>
-
-          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
-
+          <div class="col-lg-7" data-aos="fade-left">
             <div class="swiper">
               <div class="swiper-wrapper">
-
                 <div class="swiper-slide">
                   <div class="testimonial-item">
-                    <div class="d-flex">
-                      <!-- Fotoğraf kaldırıldı -->
-                      <div>
-                        <h3>Ayşe Kaya</h3>
-                        <h4>Öğretmen</h4>
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <p>
-                      <i class="bi bi-quote quote-icon-left"></i>
-                      <span>6 ayda 15 kilo verdim ve en önemlisi bu kiloları geri almadım. Diyetisyenim sayesinde sağlıklı beslenme alışkanlığı kazandım. Artık daha enerjik ve mutluyum.</span>
-                      <i class="bi bi-quote quote-icon-right"></i>
-                    </p>
+                    <h3>Selin A.</h3>
+                    <h4>Mühendis</h4>
+                    <p><i class="bi bi-quote quote-icon-left"></i><span>Katı diyet listeleri yerine bana uygun bir düzen kurduk. 4. aydan sonra kendimi çok daha dengeli hissediyorum.</span><i class="bi bi-quote quote-icon-right"></i></p>
                   </div>
-                </div><!-- End testimonial item -->
-
+                </div>
                 <div class="swiper-slide">
                   <div class="testimonial-item">
-                    <div class="d-flex">
-                      <!-- Fotoğraf kaldırıldı -->
-                      <div>
-                        <h3>Mehmet Demir</h3>
-                        <h4>Fitness Eğitmeni</h4>
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <p>
-                      <i class="bi bi-quote quote-icon-left"></i>
-                      <span>Sporcu beslenmesi programı ile performansım inanılmaz arttı. Kas gelişimim hızlandı ve antrenman sonrası toparlanma sürem kısaldı. Kesinlikle tavsiye ederim.</span>
-                      <i class="bi bi-quote quote-icon-right"></i>
-                    </p>
+                    <h3>Burak T.</h3>
+                    <h4>Yazılım Uzmanı</h4>
+                    <p><i class="bi bi-quote quote-icon-left"></i><span>Online takip çok rahattı. İş temposunda bile uygulayabileceğim bir planla ilerledik ve ölçümlerimde belirgin değişim oldu.</span><i class="bi bi-quote quote-icon-right"></i></p>
                   </div>
-                </div><!-- End testimonial item -->
-
+                </div>
                 <div class="swiper-slide">
                   <div class="testimonial-item">
-                    <div class="d-flex">
-                      <!-- Fotoğraf kaldırıldı -->
-                      <div>
-                        <h3>Fatma Özkan</h3>
-                        <h4>Hamile</h4>
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <p>
-                      <i class="bi bi-quote quote-icon-left"></i>
-                      <span>Hamilelik döneminde beslenme programı ile hem kendim hem de bebeğim için en iyi beslenmeyi sağladım. Bulantılarım azaldı ve enerjim arttı.</span>
-                      <i class="bi bi-quote quote-icon-right"></i>
-                    </p>
+                    <h3>Gizem K.</h3>
+                    <h4>Akademisyen</h4>
+                    <p><i class="bi bi-quote quote-icon-left"></i><span>WhatsApp üzerinden hızlı geri dönüş almak motivasyonumu yükseltti. Programın esnek olması en büyük artıydı.</span><i class="bi bi-quote quote-icon-right"></i></p>
                   </div>
-                </div><!-- End testimonial item -->
-
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <div class="d-flex">
-                      <!-- Fotoğraf kaldırıldı -->
-                      <div>
-                        <h3>Ali Yılmaz</h3>
-                        <h4>Diyabet Hastası</h4>
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <p>
-                      <i class="bi bi-quote quote-icon-left"></i>
-                      <span>Diyabet beslenmesi programı ile kan şekerim kontrol altına girdi. Artık ilaç dozlarım azaldı ve yaşam kalitem arttı. Teşekkürler NutriLife!</span>
-                      <i class="bi bi-quote quote-icon-right"></i>
-                    </p>
-                  </div>
-                </div><!-- End testimonial item -->
-
+                </div>
               </div>
               <div class="swiper-pagination"></div>
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
             </div>
-
           </div>
+        </div>
+      </div>
+    </section>
 
+    <section id="wellbeing-guide" class="section wellbeing-guide">
+      <div class="container">
+        <div class="guide-header" data-aos="fade-up">
+          <h2>Bütünsel Sağlık Rehberi</h2>
+          <p>Bu yolculukta yalnız değilsin; ihtiyaç duyduğunda sana eşlik edecek doğru rehber her zaman burada.</p>
+          <p style="max-width:720px;margin:0 auto 16px auto;color:#5e7262;">
+            Beslenme, uyku, stres yönetimi, hormon dengesi, ebeveynlik ve günlük rutin konularında uzman görüşlerine dayanan güncel içeriklerle
+            sürecini adım adım güçlendirebilirsin. Her içerik kısa, anlaşılır ve doğrudan uygulanabilir öneriler içerir.
+          </p>
+          <a href="#" class="guide-all-link">Tüm İçerikleri Gör <i class="bi bi-chevron-right"></i></a>
         </div>
 
-      </div>
+        <div class="swiper guide-swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <article class="guide-card">
+              <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80" alt="Sağlıklı beslenme">
+              <div class="guide-body">
+                <div class="guide-meta"><i class="bi bi-clock"></i> 3 Dakika Okuma Süresi</div>
+                <h3 class="guide-title">Organik gıdalar gerçekten daha besleyici mi?</h3>
+                <p class="guide-desc">Organik ve konvansiyonel ürünler arasındaki farkları, uzman görüşleriyle sade şekilde inceleyen kısa bir rehber.</p>
+                <a href="saglik-rehberi.html#organik-gidalar" class="guide-btn">İçeriği Görüntüle</a>
+              </div>
+              </article>
+            </div>
 
-    </section><!-- /Testimonials Section -->
+            <div class="swiper-slide">
+              <article class="guide-card">
+              <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80" alt="Niyet ve zihin">
+              <div class="guide-body">
+                <div class="guide-meta"><i class="bi bi-clock"></i> 4 Dakika Okuma Süresi</div>
+                <h3 class="guide-title">Niyetin gücü: Yeni başlangıç ritüelleri</h3>
+                <p class="guide-desc">Zihin, beden ve günlük rutinde denge kurmaya yardımcı olabilecek basit niyet alışkanlıkları.</p>
+                <a href="saglik-rehberi.html#niyet-ritueli" class="guide-btn">İçeriği Görüntüle</a>
+              </div>
+              </article>
+            </div>
 
-    <!-- Faq Section -->
-    <section id="faq" class="faq section light-background">
+            <div class="swiper-slide">
+              <article class="guide-card">
+              <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=900&q=80" alt="Olumsuzluk eğilimi">
+              <div class="guide-body">
+                <div class="guide-meta"><i class="bi bi-clock"></i> 3 Dakika Okuma Süresi</div>
+                <h3 class="guide-title">Zihin neden olumsuza eğilimli?</h3>
+                <p class="guide-desc">Olumsuzluk yanlılığını anlamak ve gün içinde bunu dengelemek için uygulanabilir mini öneriler.</p>
+                <a href="saglik-rehberi.html#olumsuzluk-egilimi" class="guide-btn">İçeriği Görüntüle</a>
+              </div>
+              </article>
+            </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Sıkça Sorulan Sorular</h2>
-        <p>Beslenme ve diyetisyenlik hizmetlerimiz hakkında merak edilen sorular</p>
-      </div><!-- End Section Title -->
+            <div class="swiper-slide">
+              <article class="guide-card">
+              <img src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&w=900&q=80" alt="Bebek beslenmesi">
+              <div class="guide-body">
+                <div class="guide-meta"><i class="bi bi-clock"></i> 3 Dakika Okuma Süresi</div>
+                <h3 class="guide-title">Bebeklerde katı gıdaya geçişte püf noktalar</h3>
+                <p class="guide-desc">Katı gıdaya geçiş sürecinde ebeveynlerin en çok merak ettiği temel sorulara hızlı cevaplar.</p>
+                <a href="saglik-rehberi.html#bebek-kati-gida" class="guide-btn">İçeriği Görüntüle</a>
+              </div>
+              </article>
+            </div>
+          
+            <div class="swiper-slide">
+              <article class="guide-card">
+              <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=900&q=80" alt="Şeker tüketimi">
+              <div class="guide-body">
+                <div class="guide-meta"><i class="bi bi-clock"></i> 5 Dakika Okuma Süresi</div>
+                <h3 class="guide-title">Şekerli içecekleri azaltmanın sürdürülebilir yolları</h3>
+                <p class="guide-desc">Gün içinde fark etmeden artan şeker tüketimini azaltmak için alışkanlık odaklı, uygulanabilir ve gerçekçi alternatif planlar.</p>
+                <a href="saglik-rehberi.html#sekerli-icecekler" class="guide-btn">İçeriği Görüntüle</a>
+              </div>
+              </article>
+            </div>
 
-      <div class="container">
+            <div class="swiper-slide">
+              <article class="guide-card">
+              <img src="https://images.unsplash.com/photo-1447452001602-7090c7ab2db3?auto=format&fit=crop&w=900&q=80" alt="Kronik yorgunluk">
+              <div class="guide-body">
+                <div class="guide-meta"><i class="bi bi-clock"></i> 4 Dakika Okuma Süresi</div>
+                <h3 class="guide-title">Kronik yorgunluğu anlamak: beden ne anlatıyor?</h3>
+                <p class="guide-desc">Sürekli yorgun hissetmenin arkasındaki temel nedenleri tanımak ve enerji yönetimini güçlendirmek için başlangıç rehberi.</p>
+                <a href="saglik-rehberi.html#kronik-yorgunluk" class="guide-btn">İçeriği Görüntüle</a>
+              </div>
+              </article>
+            </div>
 
-        <div class="row gy-4">
+            <div class="swiper-slide">
+              <article class="guide-card">
+              <img src="https://images.unsplash.com/photo-1465189684280-6a8fa9b19a7a?auto=format&fit=crop&w=900&q=80" alt="Regl döneminde beslenme">
+              <div class="guide-body">
+                <div class="guide-meta"><i class="bi bi-clock"></i> 6 Dakika Okuma Süresi</div>
+                <h3 class="guide-title">Regl döneminde beslenme ve hareket önerileri</h3>
+                <p class="guide-desc">Dönemsel şişkinlik, tatlı isteği ve enerji düşüklüğünü yönetmek için beslenme, sıvı alımı ve hafif egzersiz önerileri.</p>
+                <a href="saglik-rehberi.html#regl-donemi" class="guide-btn">İçeriği Görüntüle</a>
+              </div>
+              </article>
+            </div>
 
-          <div class="col-lg-10 mx-auto" data-aos="fade-up" data-aos-delay="100">
-            <div class="faq-list">
-              <ul>
-                <li data-aos="fade-up" data-aos-delay="200">
-                  <div class="faq-item">
-                    <div class="faq-header">
-                      <i class="fas fa-question-circle floating-icon"></i>
-                      <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">
-                        Kilo vermek için ne kadar süre gerekir?
-                        <i class="bi bi-chevron-down icon-show"></i>
-                        <i class="bi bi-chevron-up icon-close"></i>
-                      </div>
-                    </div>
-                    <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                      <div class="faq-content">
-                        <p>
-                          Kilo verme süresi kişiden kişiye değişir. Yaş, cinsiyet, metabolizma hızı, aktivite seviyesi ve hedef kilonuz gibi faktörler etkilidir. 
-                          Sağlıklı kilo verme haftada 0.5-1 kg arasındadır. Uzman diyetisyenimiz size özel bir program hazırlayarak 
-                          gerçekçi hedefler belirleyecektir.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
+            <div class="swiper-slide">
+              <article class="guide-card">
+              <img src="https://images.unsplash.com/photo-1471115853179-bb1d604434e0?auto=format&fit=crop&w=900&q=80" alt="Uyku hijyeni">
+              <div class="guide-body">
+                <div class="guide-meta"><i class="bi bi-clock"></i> 4 Dakika Okuma Süresi</div>
+                <h3 class="guide-title">Daha kaliteli uyku için akşam rutini nasıl kurulur?</h3>
+                <p class="guide-desc">Gece açlığı, geç saat ekran kullanımı ve düzensiz saatlerin uykuya etkisini azaltacak pratik uyku hijyeni adımları.</p>
+                <a href="saglik-rehberi.html#uyku-rutini" class="guide-btn">İçeriği Görüntüle</a>
+              </div>
+              </article>
+            </div>
 
-                <li data-aos="fade-up" data-aos-delay="300">
-                  <div class="faq-item">
-                    <div class="faq-header">
-                      <i class="fas fa-question-circle floating-icon"></i>
-                      <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">
-                        Hangi besinler metabolizmayı hızlandırır?
-                        <i class="bi bi-chevron-down icon-show"></i>
-                        <i class="bi bi-chevron-up icon-close"></i>
-                      </div>
-                    </div>
-                    <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                      <div class="faq-content">
-                        <p>
-                          Yeşil çay, acı biber, zencefil, tarçın, protein açısından zengin besinler ve omega-3 yağ asitleri metabolizmayı hızlandırmaya yardımcı olur. 
-                          Ancak tek başına besinler yeterli değildir. Düzenli egzersiz, yeterli uyku ve stres yönetimi de önemlidir.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
+            <div class="swiper-slide">
+              <article class="guide-card">
+              <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=900&q=80" alt="Bağırsak sağlığı">
+              <div class="guide-body">
+                <div class="guide-meta"><i class="bi bi-clock"></i> 5 Dakika Okuma Süresi</div>
+                <h3 class="guide-title">Bağırsak dostu beslenme: nereden başlamalı?</h3>
+                <p class="guide-desc">Prebiyotik, probiyotik, lif ve sıvı dengesini günlük plana eklemek için sade bir başlangıç çerçevesi ve örnek tabaklar.</p>
+                <a href="saglik-rehberi.html#bagirsak-dostu" class="guide-btn">İçeriği Görüntüle</a>
+              </div>
+              </article>
+            </div>
 
-                <li data-aos="fade-up" data-aos-delay="400">
-                  <div class="faq-item">
-                    <div class="faq-header">
-                      <i class="fas fa-question-circle floating-icon"></i>
-                      <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">
-                        Hamilelikte nasıl beslenmeliyim?
-                        <i class="bi bi-chevron-down icon-show"></i>
-                        <i class="bi bi-chevron-up icon-close"></i>
-                      </div>
-                    </div>
-                    <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                      <div class="faq-content">
-                        <p>
-                          Hamilelikte beslenme hem anne hem bebek sağlığı için kritiktir. Folik asit, demir, kalsiyum, protein ve omega-3 açısından zengin besinler tüketilmelidir. 
-                          Uzman diyetisyenimiz hamilelik döneminize özel beslenme programı hazırlayacaktır.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li data-aos="fade-up" data-aos-delay="500">
-                  <div class="faq-item">
-                    <div class="faq-header">
-                      <i class="fas fa-question-circle floating-icon"></i>
-                      <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">
-                        Diyabet hastaları nasıl beslenmelidir?
-                        <i class="bi bi-chevron-down icon-show"></i>
-                        <i class="bi bi-chevron-up icon-close"></i>
-                      </div>
-                    </div>
-                    <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                      <div class="faq-content">
-                        <p>
-                          Diyabet hastaları karbonhidrat sayımı yapmalı, düzenli öğün saatlerine uymalı ve lif açısından zengin besinler tüketmelidir. 
-                          Şeker ve rafine karbonhidratlardan kaçınmalı, protein ve sağlıklı yağları tercih etmelidir.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li data-aos="fade-up" data-aos-delay="600">
-                  <div class="faq-item">
-                    <div class="faq-header">
-                      <i class="fas fa-question-circle floating-icon"></i>
-                      <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">
-                        Sporcu beslenmesi nasıl olmalıdır?
-                        <i class="bi bi-chevron-down icon-show"></i>
-                        <i class="bi bi-chevron-up icon-close"></i>
-                      </div>
-                    </div>
-                    <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-                      <div class="faq-content">
-                        <p>
-                          Sporcu beslenmesi antrenman öncesi, sırası ve sonrası olmak üzere üç dönemi kapsar. 
-                          Karbonhidrat, protein ve yağ dengesi önemlidir. Hidrasyon ve elektrolit dengesi de kritiktir. 
-                          Spor türünüze ve yoğunluğunuza göre özel program hazırlanır.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li data-aos="fade-up" data-aos-delay="700">
-                  <div class="faq-item">
-                    <div class="faq-header">
-                      <i class="fas fa-question-circle floating-icon"></i>
-                      <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">
-                        Online diyetisyenlik hizmeti alabilir miyim?
-                        <i class="bi bi-chevron-down icon-show"></i>
-                        <i class="bi bi-chevron-up icon-close"></i>
-                      </div>
-                    </div>
-                    <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-                      <div class="faq-content">
-                        <p>
-                          Evet, online diyetisyenlik hizmeti sunuyoruz. Video görüşmeleri ile uzaktan danışmanlık alabilir, 
-                          beslenme programınızı dijital olarak takip edebilirsiniz. WhatsApp üzerinden de sürekli destek alabilirsiniz.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li data-aos="fade-up" data-aos-delay="800">
-                  <div class="faq-item">
-                    <div class="faq-header">
-                      <i class="fas fa-question-circle floating-icon"></i>
-                      <div data-bs-toggle="collapse" href="#faq7" class="collapsed question">
-                        Randevu nasıl alabilirim?
-                        <i class="bi bi-chevron-down icon-show"></i>
-                        <i class="bi bi-chevron-up icon-close"></i>
-                      </div>
-                    </div>
-                    <div id="faq7" class="collapse" data-bs-parent=".faq-list">
-                      <div class="faq-content">
-                        <p>
-                          Randevu almak için telefon, WhatsApp veya web sitemizdeki randevu formunu kullanabilirsiniz. 
-                          İlk görüşme ücretsizdir ve sağlık durumunuz hakkında detaylı bilgi alırız.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li data-aos="fade-up" data-aos-delay="900">
-                  <div class="faq-item">
-                    <div class="faq-header">
-                      <i class="fas fa-question-circle floating-icon"></i>
-                      <div data-bs-toggle="collapse" href="#faq8" class="collapsed question">
-                        Beslenme programı ne kadar sürede hazırlanır?
-                        <i class="bi bi-chevron-down icon-show"></i>
-                        <i class="bi bi-chevron-up icon-close"></i>
-                      </div>
-                    </div>
-                    <div id="faq8" class="collapse" data-bs-parent=".faq-list">
-                      <div class="faq-content">
-                        <p>
-                          İlk görüşmeden sonra 24-48 saat içinde kişiye özel beslenme programınız hazırlanır. 
-                          Program sürekli güncellenir ve ihtiyaçlarınıza göre değiştirilir.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-              </ul>
+            <div class="swiper-slide">
+              <article class="guide-card">
+              <img src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?auto=format&fit=crop&w=900&q=80" alt="Öğün planlama">
+              <div class="guide-body">
+                <div class="guide-meta"><i class="bi bi-clock"></i> 7 Dakika Okuma Süresi</div>
+                <h3 class="guide-title">Haftalık öğün planı: çalışanlar için pratik model</h3>
+                <p class="guide-desc">Yoğun tempoda dışarıdan yemek zorunda kalanlar için ofise uygun, hazırlaması kolay ve sürdürülebilir öğün planlama yöntemi.</p>
+                <a href="saglik-rehberi.html#haftalik-ogun-plani" class="guide-btn">İçeriği Görüntüle</a>
+              </div>
+              </article>
             </div>
           </div>
-
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Faq Section -->
+    <section id="faq" class="faq section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Sık Sorulanlar</h2>
+        <p>En çok gelen soruları sade bir yapıda topladık</p>
+      </div>
+      <div class="container faq-minimal" data-aos="fade-up" data-aos-delay="100">
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+            <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">İlk görüşme nasıl başlıyor?</button></h2>
+            <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Önce WhatsApp üzerinden kısa bilgi alınıyor, ardından hedef ve yaşam düzeninize göre süreç planlanıyor.</div></div>
+          </div>
+          <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">Yüz yüze randevu zorunlu mu?</button></h2>
+            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Hayır. Süreç ağırlıklı olarak online ve WhatsApp takipli yürütülür.</div></div>
+          </div>
+          <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">Programlar çok katı mı?</button></h2>
+            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Hayır. Programlar kişisel rutine uygun esnek şekilde hazırlanır, sürdürülebilirlik önceliklidir.</div></div>
+          </div>
+          <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4">Ne kadar sürede sonuç alınır?</button></h2>
+            <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Kişiye göre değişir. Düzenli takip ve plana uyum ile genellikle ilk haftalardan itibaren ölçümlerde fark görülür.</div></div>
+          </div>
+          <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5">Takip süreci ne sıklıkla yapılıyor?</button></h2>
+            <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Danışanın ihtiyacına göre değişmekle birlikte çoğunlukla haftalık veya 10 günlük periyotlarla ilerlenir. Ölçüm sonuçları, iştah durumu, uyku düzeni ve sürdürülebilirlik birlikte değerlendirilir.</div></div>
+          </div>
+          <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6">Online danışmanlık yüz yüze kadar etkili olur mu?</button></h2>
+            <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Evet. Doğru takip sistemi, düzenli geri bildirim ve ulaşılabilir iletişim ile online süreç oldukça verimli ilerler. Özellikle yoğun çalışan danışanlarda uyum oranı çoğu zaman daha yüksek olur.</div></div>
+          </div>
+          <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7">Listeler kişiye göre değişiyor mu?</button></h2>
+            <div id="q7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Kesinlikle. Çalışma saatleri, sağlık öyküsü, sevilen-sevilmeyen besinler, bütçe ve günlük tempo dikkate alınarak tamamen kişiselleştirilmiş plan hazırlanır. Tek tip liste yaklaşımı kullanılmaz.</div></div>
+          </div>
+          <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8">Süreçte motivasyon düşerse ne yapılıyor?</button></h2>
+            <div id="q8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Motivasyon düşüşü sürecin doğal parçasıdır. Bu durumda hedefler yeniden sadeleştirilir, uygulanabilir mini adımlara dönülür ve danışanın sürdürebileceği en gerçekçi plana geçiş yapılır.</div></div>
+          </div>
+          <div class="accordion-item border-0 rounded-3 overflow-hidden">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q9">İlk görüşmeye nasıl hazırlanmalıyım?</button></h2>
+            <div id="q9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Son 1 haftalık beslenme düzenini, varsa kullandığın ilaç/takviyeleri, günlük su tüketimini ve hedeflerini not etmen yeterli. Böylece ilk görüşmede çok daha net ve hızlı bir plan oluşturulabilir.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery section">
-
-      <!-- Section Title -->
+    <section id="gallery" class="gallery section light-background gallery-clean">
       <div class="container section-title" data-aos="fade-up">
         <h2>Galeri</h2>
-       
-      </div><!-- End Section Title -->
-
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row g-0">
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-1.webp" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-1.webp" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-2.webp" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-2.webp" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-3.webp" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-3.webp" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-4.webp" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-4.webp" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-5.webp" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-5.webp" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-6.webp" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-6.webp" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-7.webp" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-7.webp" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-8.webp" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-8.webp" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-        </div>
-
+        <p>Sadece fotoğraf değil; danışmanlık sürecini anlatan mini içerik kartları da burada.</p>
       </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper gallery-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="gallery-mix-card">
+                <a href="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1400&q=80" class="glightbox" data-gallery="images-gallery">
+                  <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=80" alt="Sağlıklı tabak">
+                </a>
+                <div class="gallery-mix-note">
+                  <h4>Renkli Tabak Prensibi</h4>
+                  <p>Her ana öğünde farklı renklerden besinler kullanarak vitamin-mineral çeşitliliği artırılır.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="gallery-mix-card">
+                <a href="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1400&q=80" class="glightbox" data-gallery="images-gallery">
+                  <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80" alt="Sebzeli öğün">
+                </a>
+                <div class="gallery-mix-note">
+                  <h4>Danışan Menüsü Örneği</h4>
+                  <p>Yoğun iş temposunda hazırlanabilir, 15 dakikada tamamlanan pratik öğün modeli.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="gallery-mix-card">
+                <a href="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1400&q=80" class="glightbox" data-gallery="images-gallery">
+                  <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80" alt="Hazırlık süreci">
+                </a>
+                <div class="gallery-mix-note">
+                  <h4>Haftalık Hazırlık</h4>
+                  <p>Pazar günü yapılan kısa hazırlıklar, hafta içi beslenme düzenini sürdürülebilir hale getirir.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="gallery-mix-card">
+                <a href="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=1400&q=80" class="glightbox" data-gallery="images-gallery">
+                  <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=900&q=80" alt="Meyve tabağı">
+                </a>
+                <div class="gallery-mix-note">
+                  <h4>Ara Öğün Dengesi</h4>
+                  <p>Kan şekeri dalgalanmasını azaltan, tokluk süresini uzatan dengeli ara öğün seçenekleri.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="gallery-mix-card">
+                <a href="https://images.unsplash.com/photo-1467453678174-768ec283a940?auto=format&fit=crop&w=1400&q=80" class="glightbox" data-gallery="images-gallery">
+                  <img src="https://images.unsplash.com/photo-1467453678174-768ec283a940?auto=format&fit=crop&w=900&q=80" alt="Doğal besinler">
+                </a>
+                <div class="gallery-mix-note">
+                  <h4>Doğal Seçim Rehberi</h4>
+                  <p>Market alışverişinde etiket okuma ve doğru ürün eşleştirme ile daha iyi seçimler yapılır.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="gallery-mix-card">
+                <a href="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1400&q=80" class="glightbox" data-gallery="images-gallery">
+                  <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=900&q=80" alt="Sebze hazırlık">
+                </a>
+                <div class="gallery-mix-note">
+                  <h4>Portion Kontrolü</h4>
+                  <p>Kısıtlama yerine porsiyon yönetimi ile sürdürülebilir sonuç odaklı bir süreç yürütülür.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
 
-    </section><!-- /Gallery Section -->
-
-    <!-- Contact Section -->
     <section id="contact" class="contact section">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>İletişim</h2>
-        <p>Sağlıklı yaşam yolculuğunuzda size yardımcı olmak için buradayız</p>
-      </div><!-- End Section Title -->
-
+        <p>Detaylı bilgi ve süreç başlangıcı için WhatsApp üzerinden yazabilirsiniz</p>
+      </div>
       <div class="container">
         <div class="row gy-4">
-          
-          <!-- Contact Info Cards -->
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
             <div class="row gy-4">
-              
               <div class="col-md-6">
                 <div class="contact-card">
-                  <div class="contact-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                  </div>
-                  <div class="contact-info">
-                    <h4>Adres</h4>
-                    <p>Atatürk Caddesi No: 123<br>Kadıköy, İstanbul</p>
-                  </div>
+                  <div class="contact-icon"><i class="fas fa-user-md"></i></div>
+                  <div class="contact-info"><h4>Diyetisyen</h4><p>Medine Yıldız</p></div>
                 </div>
               </div>
-
               <div class="col-md-6">
                 <div class="contact-card">
-                  <div class="contact-icon">
-                    <i class="fas fa-phone-alt"></i>
-                  </div>
-                  <div class="contact-info">
-                    <h4>Telefon</h4>
-                    <p>+90 505 844 60 46</p>
-                  </div>
+                  <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                  <div class="contact-info"><h4>Çalışma Saatleri</h4><p>Pazartesi - Cumartesi: 08:30 - 18:00<br>Pazar: Kapalı</p></div>
                 </div>
               </div>
-
               <div class="col-md-6">
                 <div class="contact-card">
-                  <div class="contact-icon">
-                    <i class="fas fa-envelope"></i>
-                  </div>
-                  <div class="contact-info">
-                    <h4>Email</h4>
-                    <p>info@nutrilife.com</p>
-                  </div>
+                  <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                  <div class="contact-info"><h4>Telefon / WhatsApp</h4><p id="contactPhoneText">Numara bekleniyor</p></div>
                 </div>
               </div>
-
               <div class="col-md-6">
                 <div class="contact-card">
-                  <div class="contact-icon">
-                    <i class="fas fa-clock"></i>
-                  </div>
-                  <div class="contact-info">
-                    <h4>Çalışma Saatleri</h4>
-                    <p>Pazartesi - Cuma: 09:00 - 18:00<br>Cumartesi: 09:00 - 14:00</p>
-                  </div>
+                  <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                  <div class="contact-info"><h4>E-posta</h4><p>mediney.1060@gmail.com</p></div>
                 </div>
               </div>
-
             </div>
           </div>
 
-          <!-- Contact Form -->
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="contact-form-card text-center d-flex flex-column align-items-center justify-content-center" style="height:100%;">
-              <a href="https://wa.me/905058446046" class="cta-btn pulse-button w-100 mb-2" target="_blank" style="font-size:1.2rem;">
-                <i class="fab fa-whatsapp"></i> WhatsApp ile İletişim<br><span style="font-size:1rem;">+90 505 844 60 46</span>
-              </a>
+            <div class="contact-form-card text-center d-flex flex-column justify-content-center" style="height:100%;">
+              <h4>Hızlı İletişim</h4>
+              <p class="mb-4">Randevu sistemi yoktur. Doğrudan WhatsApp üzerinden iletişime geçebilirsiniz.</p>
+              <a href="#" id="contactWhatsappBtn" class="cta-btn"><i class="fab fa-whatsapp"></i> WhatsApp'tan Yaz</a>
             </div>
           </div>
-
         </div>
       </div>
-
-    </section><!-- /Contact Section -->
-
+    </section>
   </main>
 
-  <footer id="footer" class="footer light-background modern-footer sticky-footer">
-    <div class="footer-decor-icons">
-      <span class="footer-decor-icon left"><i class="bi bi-cup-straw"></i></span>
-      <span class="footer-decor-icon right"><i class="bi bi-egg-fried"></i></span>
-      <span class="footer-decor-icon bottom"><i class="bi bi-heart-pulse"></i></span>
-      <span class="footer-decor-icon bottom2"><i class="bi bi-emoji-smile"></i></span>
-      <span class="footer-decor-icon bottom3"><i class="bi bi-droplet-half"></i></span>
-      <span class="footer-decor-icon left2"><i class="bi bi-clipboard-data"></i></span>
-      <span class="footer-decor-icon right2"><i class="bi bi-activity"></i></span>
-    </div>
-    <div class="container">
-      <h3 class="footer-title text-center">NutriLife</h3>
-      <p class="footer-desc text-center">Sağlıklı yaşam için profesyonel diyetisyenlik</p>
-      <div class="footer-motto text-center mb-3">"Her Birey İçin Bilimsel ve Doğal Beslenme!"</div>
-      <div class="footer-social text-center d-flex flex-row align-items-center justify-content-center gap-3">
-        <a href="#" class="footer-social-link"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="footer-social-link"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="footer-social-link"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="footer-social-link"><i class="bi bi-linkedin"></i></a>
-        <a href="https://wa.me/905058446046" class="footer-social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <div class="ai-float-wrap">
+    <div id="aiFloatPanel" class="ai-float-panel">
+      <div class="ai-float-head">
+        <span><i class="bi bi-robot"></i> Hızlı AI Yardım</span>
+        <button id="aiCloseBtn" class="btn btn-sm btn-light py-0 px-2">x</button>
       </div>
-      <div class="footer-bottom text-center mt-4">
-        <p>&copy; 2025 <strong>NutriLife</strong>. Tüm hakları saklıdır.</p>
-        <p class="footer-slogan">Diyetisyeniniz Yanınızda!</p>
+      <div class="ai-float-body">
+        <div class="ai-mini-answer">
+          <strong>Kısa destek:</strong> Merhaba yazarak başlayabilirsin, AI seni doğru şekilde yönlendirir.
+        </div>
+        <input id="aiQuestionInput" class="ai-mini-input" type="text" placeholder="Örn: Online danışmanlık nasıl?">
+        <button id="aiAskBtn" class="ai-mini-send">Hızlı Cevap Al</button>
+        <div id="aiAnswerText" class="ai-mini-answer" style="display:none;"></div>
+        <a href="#" id="aiFloatWhatsappBtn" class="btn btn-success w-100 rounded-pill">
+          <i class="fab fa-whatsapp"></i> WhatsApp'tan Devam Et
+        </a>
+      </div>
+    </div>
+    <button id="aiOpenBtn" class="ai-float-btn">
+      <i class="bi bi-robot"></i> AI Yardım
+    </button>
+  </div>
+
+  <footer id="footer" class="footer light-background modern-footer sticky-footer">
+    <div class="container text-center">
+      <h3 class="footer-title">Dyt. Medine Yıldız</h3>
+      <p class="footer-desc">Beslenmede denge, hayatta sürdürülebilirlik.</p>
+      <div class="footer-social d-flex align-items-center justify-content-center gap-3">
+        <a href="#" id="footerWhatsappBtn" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/dyt.medineyldz?igsh=MWR5azZqMmh0MW9tOA==" target="_blank" rel="noopener noreferrer" class="footer-social-link"><i class="bi bi-instagram"></i></a>
+      </div>
+      <div class="footer-bottom mt-4">
+        <p>&copy; 2026 <strong>Dyt. Medine Yıldız</strong>. Tüm hakları saklıdır.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/appointment.js"></script>
 
-  <style>
-  @media (max-width: 600px) {
-    .logo-title-responsive {
-      font-size: 1.1rem !important;
-    }
-  }
-  </style>
+  <script>
+    (function () {
+      var WA_NUMBER = "905454737751";
+      var WA_MESSAGE = encodeURIComponent("Merhaba Medine Hanım, beslenme danışmanlığı hakkında bilgi almak istiyorum.");
+      var waUrl = "https://wa.me/" + WA_NUMBER + "?text=" + WA_MESSAGE;
 
-  <!-- Appointment Modal (Google Apps Script iframe) -->
-  <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="appointmentModalLabel">Randevu Al</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
-        </div>
-        <div class="modal-body">
-          <div id="appointmentSetupHint" class="alert alert-warning border small mb-3" style="display:none;">
-            Randevu entegrasyonu için URL henüz ayarlanmamış. Lütfen
-            <b>assets/js/appointment.js</b> dosyasında
-            <b>CALENDLY_URL</b> (Calendly) veya
-            <b>APPOINTMENT_WEBAPP_URL</b> (Apps Script) veya
-            <b>GOOGLE_CALENDAR_EMBED_URL</b> (Takvim embed) değerini girin.
-          </div>
-          <div class="alert alert-light border small mb-3">
-            Randevu ekranı açılmazsa
-            <a id="appointmentFallbackLink" href="#" target="_blank" rel="noopener">buraya tıklayın</a>.
-          </div>
-          <!-- Calendly inline widget -->
-          <div id="calendlyContainer" class="calendly-inline-widget" data-url="https://calendly.com/dyt-eminedemirkaya/yeni-randevu?hide_gdpr_banner=1&text_color=246b2d&primary_color=e2202b" style="min-width:320px;height:700px;"></div>
-          <iframe id="appointmentIframe" class="appointment-iframe" title="Randevu Al" loading="lazy"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
+      var whatsappIds = [
+        "headerWhatsappBtn",
+        "heroWhatsappBtn",
+        "aboutWhatsappBtn",
+        "aiFloatWhatsappBtn",
+        "contactWhatsappBtn",
+        "footerWhatsappBtn"
+      ];
 
-  <!-- Calendly inline widget script -->
-  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      whatsappIds.forEach(function (id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        el.setAttribute("href", waUrl);
+        el.setAttribute("target", "_blank");
+        el.setAttribute("rel", "noopener noreferrer");
+      });
 
+      var contactPhoneText = document.getElementById("contactPhoneText");
+      if (contactPhoneText) {
+        contactPhoneText.textContent = "+90 545 473 77 51";
+      }
+
+      var aiPanel = document.getElementById("aiFloatPanel");
+      var aiOpenBtn = document.getElementById("aiOpenBtn");
+      var aiCloseBtn = document.getElementById("aiCloseBtn");
+
+      if (aiPanel && aiOpenBtn && aiCloseBtn) {
+        aiOpenBtn.addEventListener("click", function () {
+          aiPanel.classList.add("open");
+        });
+        aiCloseBtn.addEventListener("click", function () {
+          aiPanel.classList.remove("open");
+        });
+      }
+
+      var aiQuestionInput = document.getElementById("aiQuestionInput");
+      var aiAskBtn = document.getElementById("aiAskBtn");
+      var aiAnswerText = document.getElementById("aiAnswerText");
+      if (aiQuestionInput && aiAskBtn && aiAnswerText) {
+        var handleAiAsk = function () {
+          var q = (aiQuestionInput.value || "").toLowerCase().trim();
+          if (!q) {
+            aiAnswerText.style.display = "block";
+            aiAnswerText.textContent = "Merhaba 👋 Kısa sorunu yazarsan hemen yardımcı olurum. Detaylı ve kişisel plan için alttaki WhatsApp butonuna yönlendirebilirim.";
+            return;
+          }
+          var answer = "Merhaba 👋 Bu konuda kısa ön bilgi verebilirim. Kişisel ve net planlama için seni WhatsApp'a yönlendiriyorum.";
+          if (q.includes("merhaba") || q.includes("selam")) answer = "Merhaba 👋 Sana yardımcı olmaktan memnun olurum. Hedefine göre en doğru plan için WhatsApp'tan devam edebiliriz.";
+          else if (q.includes("online")) answer = "Merhaba 👋 Online danışmanlıkta haftalık takip, menü güncelleme ve düzenli geri bildirim yapılır. Hızlı başlangıç için WhatsApp'a geçebilirsin.";
+          else if (q.includes("kilo")) answer = "Merhaba 👋 Kilo yönetiminde tek tip liste kullanılmaz; yaşam düzenine göre kişisel plan hazırlanır. Seni WhatsApp'a yönlendirebilirim.";
+          else if (q.includes("ücret") || q.includes("fiyat")) answer = "Merhaba 👋 Ücret ve paket detaylarını en net şekilde WhatsApp üzerinden paylaşabiliyoruz. İstersen hemen yönlendireyim.";
+          else if (q.includes("randevu")) answer = "Merhaba 👋 Randevu formu yerine doğrudan WhatsApp üzerinden hızlı planlama yapılıyor. Alttaki butonla hemen geçebilirsin.";
+          aiAnswerText.style.display = "block";
+          aiAnswerText.textContent = answer + " Ayrıntı için alttaki WhatsApp butonunu kullanabilirsin.";
+        };
+        aiAskBtn.addEventListener("click", handleAiAsk);
+        aiQuestionInput.addEventListener("keydown", function (e) {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            handleAiAsk();
+          }
+        });
+      }
+
+      var guideSwiperEl = document.querySelector(".guide-swiper");
+      if (guideSwiperEl && typeof Swiper !== "undefined") {
+        new Swiper(".guide-swiper", {
+          speed: 650,
+          loop: true,
+          spaceBetween: 18,
+          autoplay: {
+            delay: 3500,
+            disableOnInteraction: false
+          },
+          pagination: {
+            el: ".guide-swiper .swiper-pagination",
+            clickable: true
+          },
+          navigation: {
+            nextEl: ".guide-swiper .swiper-button-next",
+            prevEl: ".guide-swiper .swiper-button-prev"
+          },
+          breakpoints: {
+            0: { slidesPerView: 1.1 },
+            576: { slidesPerView: 1.6 },
+            992: { slidesPerView: 2.5 },
+            1200: { slidesPerView: 3.3 }
+          }
+        });
+      }
+
+      var gallerySwiperEl = document.querySelector(".gallery-swiper");
+      if (gallerySwiperEl && typeof Swiper !== "undefined") {
+        new Swiper(".gallery-swiper", {
+          speed: 650,
+          loop: true,
+          spaceBetween: 16,
+          autoplay: {
+            delay: 3200,
+            disableOnInteraction: false
+          },
+          pagination: {
+            el: ".gallery-swiper .swiper-pagination",
+            clickable: true
+          },
+          navigation: {
+            nextEl: ".gallery-swiper .swiper-button-next",
+            prevEl: ".gallery-swiper .swiper-button-prev"
+          },
+          breakpoints: {
+            0: { slidesPerView: 1.1 },
+            576: { slidesPerView: 1.5 },
+            992: { slidesPerView: 2.3 },
+            1200: { slidesPerView: 3.1 }
+          }
+        });
+      }
+
+    })();
+  </script>
 </body>
 
 </html>
